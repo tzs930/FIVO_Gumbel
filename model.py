@@ -53,7 +53,7 @@ class VRNN(nn.Module):
 		self.prior_mean = nn.Linear(h_dim, z_dim)
 		self.prior_std = nn.Sequential(
 			nn.Linear(h_dim, z_dim),
-			nn.Softplus())
+			nn.Softplus()) 
 
 		#decoder
 		self.dec = nn.Sequential(
@@ -70,7 +70,8 @@ class VRNN(nn.Module):
 			nn.Sigmoid())
 
 		#recurrence
-		self.rnn = nn.GRU(h_dim + h_dim, h_dim, n_layers, bias)
+		# self.rnn = nn.GRU(h_dim + h_dim, h_dim, n_layers, bias)
+		self.rnn = nn.LSTM(h_dim + h_dim, h_dim, n_layers, bias)
 
 
 	def forward(self, x):
@@ -81,6 +82,8 @@ class VRNN(nn.Module):
 		nll_loss = 0
 
 		h = Variable(torch.zeros(self.n_layers, x.size(1), self.h_dim))
+		c = Variable(torch.zeros(self.n_layers, x.size(1), self.h_dim))
+
 		for t in range(x.size(0)):
 			# Inference
 			phi_x_t = self.phi_x(x[t])
@@ -93,7 +96,7 @@ class VRNN(nn.Module):
 			#prior
 			prior_t = self.prior(h[-1])
 			prior_mean_t = self.prior_mean(prior_t)
-			prior_std_t = self.prior_std(prior_t)
+			prior_std_t = self.prior_std(prior_t) + 1.
 
 			#sampling and reparameterization
 			z_t = self._reparameterized_sample(enc_mean_t, enc_std_t)
@@ -105,7 +108,7 @@ class VRNN(nn.Module):
 			dec_std_t = self.dec_std(dec_t)
 
 			#recurrence
-			_, h = self.rnn(torch.cat([phi_x_t, phi_z_t], 1).unsqueeze(0), h)
+			_, (h,c) = self.rnn(torch.cat([phi_x_t, phi_z_t], 1).unsqueeze(0), (h,c))
 
 			#computing losses
 			kld_loss += self._kld_gauss(enc_mean_t, enc_std_t, prior_mean_t, prior_std_t)
@@ -127,6 +130,8 @@ class VRNN(nn.Module):
 		sample = torch.zeros(seq_len, self.x_dim)
 
 		h = Variable(torch.zeros(self.n_layers, 1, self.h_dim))
+		c = Variable(torch.zeros(self.n_layers, 1, self.h_dim))
+
 		for t in range(seq_len):
 
 			#prior
@@ -146,7 +151,7 @@ class VRNN(nn.Module):
 			phi_x_t = self.phi_x(dec_mean_t)
 
 			#recurrence
-			_, h = self.rnn(torch.cat([phi_x_t, phi_z_t], 1).unsqueeze(0), h)
+			_, (h, c) = self.rnn(torch.cat([phi_x_t, phi_z_t], 1).unsqueeze(0), (h, c))
 
 			sample[t] = dec_mean_t.data
 	
