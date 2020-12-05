@@ -6,7 +6,7 @@ import torch.utils.data
 from torchvision import datasets, transforms
 from torch.autograd import Variable
 import matplotlib.pyplot as plt 
-
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 """implementation of the Variational Recurrent
 Neural Network (VRNN) from https://arxiv.org/abs/1506.02216
@@ -22,6 +22,8 @@ class VRNN(nn.Module):
 		self.h_dim = h_dim
 		self.z_dim = z_dim
 		self.n_layers = n_layers
+
+		self.num_z_particles = 4
 
 		#feature-extracting transformations
 		self.phi_x = nn.Sequential(
@@ -80,7 +82,7 @@ class VRNN(nn.Module):
 
 		h = Variable(torch.zeros(self.n_layers, x.size(1), self.h_dim))
 		for t in range(x.size(0)):
-			
+			# Inference
 			phi_x_t = self.phi_x(x[t])
 
 			#encoder
@@ -173,11 +175,12 @@ class VRNN(nn.Module):
 		kld_element =  (2 * torch.log(std_2) - 2 * torch.log(std_1) + 
 			(std_1.pow(2) + (mean_1 - mean_2).pow(2)) /
 			std_2.pow(2) - 1)
-		return	0.5 * torch.sum(kld_element)
+		return 0.5 * torch.mean(torch.sum(kld_element, dim=-1), dim=-1)
 
 
 	def _nll_bernoulli(self, theta, x):
-		return - torch.sum(x*torch.log(theta) + (1-x)*torch.log(1-theta))
+		# mean w.r.t. batch, sum w.r.t input dimensions
+		return - torch.mean(torch.sum(x*torch.log(theta) + (1-x)*torch.log(1-theta), dim=-1), dim=-1)
 
 
 	def _nll_gauss(self, mean, std, x):
