@@ -1,8 +1,0 @@
-Train Epoch: 1 [0/229 (0%)]	 KLD Loss: 3912.089111 	 NLL Loss: 31257.330078
-====> Epoch: 1 Average loss: 2845.3996
-Traceback (most recent call last):
-  File "train.py", line 148, in <module>
-    evaluate(epoch)
-  File "train.py", line 84, in evaluate
-    wandb.log({'valid_KLD': mean_kld_loss.item()}, step=epoch)
-AttributeError: 'float' object has no attribute 'item'
