@@ -1,0 +1,3 @@
+/home/syseo/workspace/FIVO_Gumbel/train.py:40: UserWarning: torch.nn.utils.clip_grad_norm is now deprecated in favor of torch.nn.utils.clip_grad_norm_.
+  nn.utils.clip_grad_norm(model.parameters(), clip)
+Train Epoch: 1 [0/229 (0%)]	 KLD Loss: 3912.081543 	 NLL Loss: 31257.330078

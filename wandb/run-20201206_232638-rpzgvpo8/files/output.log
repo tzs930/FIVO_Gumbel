@@ -1,0 +1,11 @@
+train.py:40: UserWarning: torch.nn.utils.clip_grad_norm is now deprecated in favor of torch.nn.utils.clip_grad_norm_.
+  nn.utils.clip_grad_norm(model.parameters(), clip)
+Train Epoch: 1 [0/229 (0%)]	 KLD Loss: 3912.081543 	 NLL Loss: 31257.330078
+====> Epoch: 1 Average loss: 2845.3992
+Train Epoch: 2 [0/229 (0%)]	 KLD Loss: 49.345882 	 NLL Loss: 4571.549805
+Traceback (most recent call last):
+  File "train.py", line 148, in <module>
+    train(epoch)
+  File "train.py", line 36, in train
+    loss.backward()
+KeyboardInterrupt

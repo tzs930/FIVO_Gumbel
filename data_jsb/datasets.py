@@ -121,7 +121,7 @@ def create_pianoroll_dataset(path,
     # target_dense_pianoroll, _ = sparse_pianoroll_to_dense(sparse_pianoroll[1:], min_note, num_notes)
     dense_pianorolls.append(dense_pianoroll)
     # dense_pianorolls_target.append(target_dense_pianoroll)
-    lengths.append(length-1)
+    lengths.append(length)
 
   maxlen = np.max(lengths)
   sources = []
@@ -132,8 +132,9 @@ def create_pianoroll_dataset(path,
   
   sources = torch.nn.utils.rnn.pad_sequence(sources, batch_first=True).float().to(device)
   targets = torch.nn.utils.rnn.pad_sequence(targets, batch_first=True).float().to(device)
+  lengths = torch.tensor(lengths)
 
-  dataset = torch.utils.data.TensorDataset(sources, targets)
+  dataset = torch.utils.data.TensorDataset(sources, targets, lengths)
   dataset_loader = torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=False)
   
 # dense_pianorolls_target.append(sparse_pianoroll_to_dense(sparse_pianoroll[:,], min_note, num_notes))

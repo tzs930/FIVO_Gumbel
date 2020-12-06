@@ -1,0 +1,143 @@
+2020-12-06 23:32:40,458 INFO    MainThread:28319 [internal.py:wandb_internal():63] W&B internal server running at pid: 28319
+2020-12-06 23:32:40,460 INFO    WriterThread:28319 [datastore.py:open_for_write():76] open: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/run-s9p161jk.wandb
+2020-12-06 23:32:40,460 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: check_version
+2020-12-06 23:32:40,461 DEBUG   SenderThread:28319 [sender.py:send():90] send: header
+2020-12-06 23:32:40,461 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:40,461 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: check_version
+2020-12-06 23:32:40,463 DEBUG   Thread-4  :28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): pypi.org:443
+2020-12-06 23:32:40,573 DEBUG   Thread-4  :28319 [connectionpool.py:_make_request():437] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 52216
+2020-12-06 23:32:40,621 DEBUG   SenderThread:28319 [sender.py:send():90] send: run
+2020-12-06 23:32:40,630 DEBUG   SenderThread:28319 [cmd.py:execute():719] Popen(['git', 'cat-file', '--batch-check'], cwd=/home/syseo/workspace/FIVO_Gumbel, universal_newlines=False, shell=None, istream=<valid stream>)
+2020-12-06 23:32:40,659 DEBUG   SenderThread:28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-06 23:32:41,033 DEBUG   SenderThread:28319 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-12-06 23:32:41,040 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: run_start
+2020-12-06 23:32:41,040 INFO    SenderThread:28319 [dir_watcher.py:__init__():164] watching files in: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files
+2020-12-06 23:32:41,040 INFO    SenderThread:28319 [sender.py:_start_run_threads():490] run started: s9p161jk with start time 1607265160
+2020-12-06 23:32:41,040 DEBUG   SenderThread:28319 [sender.py:send():90] send: summary
+2020-12-06 23:32:41,041 INFO    SenderThread:28319 [sender.py:_save_file():568] saving file wandb-summary.json with policy end
+2020-12-06 23:32:41,044 DEBUG   HandlerThread:28319 [cmd.py:execute():719] Popen(['git', 'cat-file', '--batch-check'], cwd=/home/syseo/workspace/FIVO_Gumbel, universal_newlines=False, shell=None, istream=<valid stream>)
+2020-12-06 23:32:41,048 DEBUG   HandlerThread:28319 [cmd.py:execute():719] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/syseo/workspace/FIVO_Gumbel, universal_newlines=False, shell=None, istream=None)
+2020-12-06 23:32:41,113 DEBUG   SenderThread:28319 [sender.py:send():90] send: files
+2020-12-06 23:32:41,114 INFO    SenderThread:28319 [sender.py:_save_file():568] saving file wandb-metadata.json with policy now
+2020-12-06 23:32:41,118 DEBUG   Thread-11 :28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-06 23:32:41,119 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: status
+2020-12-06 23:32:41,119 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:41,119 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: status
+2020-12-06 23:32:41,121 DEBUG   SenderThread:28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-06 23:32:41,304 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: poll_exit
+2020-12-06 23:32:41,446 DEBUG   SenderThread:28319 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-12-06 23:32:41,451 DEBUG   SenderThread:28319 [sender.py:send():90] send: exit
+2020-12-06 23:32:41,451 INFO    SenderThread:28319 [sender.py:send_exit():168] handling exit code: 1
+2020-12-06 23:32:41,452 INFO    SenderThread:28319 [sender.py:send_exit():176] send defer
+2020-12-06 23:32:41,452 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:41,453 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: poll_exit
+2020-12-06 23:32:41,453 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: defer
+2020-12-06 23:32:41,455 INFO    HandlerThread:28319 [handler.py:handle_request_defer():69] handle defer: 0
+2020-12-06 23:32:41,455 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:41,455 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: defer
+2020-12-06 23:32:41,456 INFO    SenderThread:28319 [sender.py:send_request_defer():185] handle sender defer: 0
+2020-12-06 23:32:41,456 INFO    SenderThread:28319 [sender.py:send_request_defer():221] send defer: 1
+2020-12-06 23:32:41,457 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: defer
+2020-12-06 23:32:41,457 INFO    HandlerThread:28319 [handler.py:handle_request_defer():69] handle defer: 1
+2020-12-06 23:32:41,457 DEBUG   Thread-11 :28319 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-12-06 23:32:41,469 DEBUG   Thread-11 :28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-12-06 23:32:41,548 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:41,549 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: defer
+2020-12-06 23:32:41,549 INFO    SenderThread:28319 [sender.py:send_request_defer():185] handle sender defer: 1
+2020-12-06 23:32:41,549 INFO    SenderThread:28319 [sender.py:send_request_defer():221] send defer: 2
+2020-12-06 23:32:41,550 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: defer
+2020-12-06 23:32:41,551 INFO    HandlerThread:28319 [handler.py:handle_request_defer():69] handle defer: 2
+2020-12-06 23:32:41,551 DEBUG   SenderThread:28319 [sender.py:send():90] send: stats
+2020-12-06 23:32:41,552 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:41,553 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: defer
+2020-12-06 23:32:41,553 INFO    SenderThread:28319 [sender.py:send_request_defer():185] handle sender defer: 2
+2020-12-06 23:32:41,553 INFO    SenderThread:28319 [sender.py:send_request_defer():221] send defer: 3
+2020-12-06 23:32:41,554 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: defer
+2020-12-06 23:32:41,554 INFO    HandlerThread:28319 [handler.py:handle_request_defer():69] handle defer: 3
+2020-12-06 23:32:41,555 DEBUG   SenderThread:28319 [sender.py:send():90] send: summary
+2020-12-06 23:32:41,556 INFO    SenderThread:28319 [sender.py:_save_file():568] saving file wandb-summary.json with policy end
+2020-12-06 23:32:41,557 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:41,557 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: defer
+2020-12-06 23:32:41,557 INFO    SenderThread:28319 [sender.py:send_request_defer():185] handle sender defer: 3
+2020-12-06 23:32:41,557 INFO    SenderThread:28319 [sender.py:send_request_defer():221] send defer: 4
+2020-12-06 23:32:41,558 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: defer
+2020-12-06 23:32:41,558 INFO    HandlerThread:28319 [handler.py:handle_request_defer():69] handle defer: 4
+2020-12-06 23:32:41,559 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:41,559 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: defer
+2020-12-06 23:32:41,559 INFO    SenderThread:28319 [sender.py:send_request_defer():185] handle sender defer: 4
+2020-12-06 23:32:41,559 INFO    SenderThread:28319 [dir_watcher.py:finish():278] shutting down directory watcher
+2020-12-06 23:32:41,963 DEBUG   Thread-11 :28319 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/tzs930/fivo_vrnn/s9p161jk/wandb-metadata.json?Expires=1607351561&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=KjeSpjamZ6F3HX8p8RM1hat35AEgLG9rbrKieGXRwi59ZSgpyPbknwVfWTmbse1GEjyZbXF41pgm5N4PfLSt4q%2BP2wJhc%2BZ17o5lHNQ2zgHLUQSFSdKeVpbo0jQGYj2iXLyCPgY%2BEIgjLEAHj6QaeU2tuSTnqro4gNZ0bnBK0gp2raYTppZZo2QiXvYUsddy9y1RKnttEA42ysdHOagLZPMkAwbLOVwFU5o9KtpS30xmoTZ%2FKsKgTMnRMTGzfWlU%2BbUznrD9qTF%2BV%2BYayl5XvPLM2Nv7ZNhksoR1u1aNcdvD%2FsWpHevli%2FoZ02HIgJpT5lHWa%2FXo%2BmN2BSCnu2gQ%2BQ%3D%3D HTTP/1.1" 200 0
+2020-12-06 23:32:41,967 INFO    Thread-11 :28319 [upload_job.py:push():131] Uploaded file /tmp/tmpsor38m0twandb/1rpdbqzm-wandb-metadata.json
+2020-12-06 23:32:42,046 INFO    SenderThread:28319 [dir_watcher.py:_on_file_created():212] file/dir created: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/requirements.txt
+2020-12-06 23:32:42,047 INFO    SenderThread:28319 [dir_watcher.py:_on_file_created():212] file/dir created: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/wandb-metadata.json
+2020-12-06 23:32:42,047 INFO    SenderThread:28319 [dir_watcher.py:_on_file_created():212] file/dir created: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/output.log
+2020-12-06 23:32:42,047 INFO    SenderThread:28319 [dir_watcher.py:_on_file_created():212] file/dir created: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/wandb-summary.json
+2020-12-06 23:32:42,047 INFO    SenderThread:28319 [dir_watcher.py:finish():308] scan: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files
+2020-12-06 23:32:42,048 INFO    SenderThread:28319 [dir_watcher.py:finish():314] scan save: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/requirements.txt requirements.txt
+2020-12-06 23:32:42,048 INFO    SenderThread:28319 [dir_watcher.py:finish():314] scan save: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/wandb-summary.json wandb-summary.json
+2020-12-06 23:32:42,048 INFO    SenderThread:28319 [dir_watcher.py:finish():314] scan save: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/output.log output.log
+2020-12-06 23:32:42,050 DEBUG   Thread-12 :28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-06 23:32:42,053 DEBUG   Thread-13 :28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-06 23:32:42,053 INFO    SenderThread:28319 [dir_watcher.py:finish():314] scan save: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/wandb-metadata.json wandb-metadata.json
+2020-12-06 23:32:42,053 INFO    SenderThread:28319 [dir_watcher.py:finish():314] scan save: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/config.yaml config.yaml
+2020-12-06 23:32:42,054 INFO    SenderThread:28319 [sender.py:send_request_defer():221] send defer: 5
+2020-12-06 23:32:42,056 DEBUG   Thread-14 :28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-06 23:32:42,058 DEBUG   Thread-15 :28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-06 23:32:42,058 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: defer
+2020-12-06 23:32:42,058 INFO    HandlerThread:28319 [handler.py:handle_request_defer():69] handle defer: 5
+2020-12-06 23:32:42,059 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:42,059 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: defer
+2020-12-06 23:32:42,059 INFO    SenderThread:28319 [sender.py:send_request_defer():185] handle sender defer: 5
+2020-12-06 23:32:42,059 INFO    SenderThread:28319 [file_pusher.py:finish():169] shutting down file pusher
+2020-12-06 23:32:42,059 INFO    SenderThread:28319 [sender.py:send_request_defer():221] send defer: 6
+2020-12-06 23:32:42,059 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: defer
+2020-12-06 23:32:42,059 INFO    HandlerThread:28319 [handler.py:handle_request_defer():69] handle defer: 6
+2020-12-06 23:32:42,059 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:42,059 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: defer
+2020-12-06 23:32:42,059 INFO    SenderThread:28319 [sender.py:send_request_defer():185] handle sender defer: 6
+2020-12-06 23:32:42,060 DEBUG   Thread-5  :28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-06 23:32:42,389 DEBUG   Thread-15 :28319 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-12-06 23:32:42,391 DEBUG   Thread-12 :28319 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-12-06 23:32:42,393 DEBUG   Thread-13 :28319 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-12-06 23:32:42,408 DEBUG   Thread-15 :28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-12-06 23:32:42,416 DEBUG   Thread-12 :28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-12-06 23:32:42,417 DEBUG   Thread-14 :28319 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-12-06 23:32:42,429 DEBUG   Thread-5  :28319 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/tzs930/fivo_vrnn/s9p161jk/file_stream HTTP/1.1" 200 None
+2020-12-06 23:32:42,431 DEBUG   Thread-13 :28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-12-06 23:32:42,441 DEBUG   Thread-14 :28319 [connectionpool.py:_new_conn():959] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-12-06 23:32:42,687 DEBUG   Thread-5  :28319 [connectionpool.py:_make_request():437] https://api.wandb.ai:443 "POST /files/tzs930/fivo_vrnn/s9p161jk/file_stream HTTP/1.1" 200 None
+2020-12-06 23:32:42,691 INFO    SenderThread:28319 [sender.py:send_request_defer():221] send defer: 7
+2020-12-06 23:32:42,692 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: defer
+2020-12-06 23:32:42,692 INFO    HandlerThread:28319 [handler.py:handle_request_defer():69] handle defer: 7
+2020-12-06 23:32:42,693 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:42,693 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: defer
+2020-12-06 23:32:42,693 INFO    SenderThread:28319 [sender.py:send_request_defer():185] handle sender defer: 7
+2020-12-06 23:32:42,694 INFO    SenderThread:28319 [sender.py:send_request_defer():221] send defer: 8
+2020-12-06 23:32:42,696 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: defer
+2020-12-06 23:32:42,696 INFO    HandlerThread:28319 [handler.py:handle_request_defer():69] handle defer: 8
+2020-12-06 23:32:42,696 DEBUG   SenderThread:28319 [sender.py:send():90] send: final
+2020-12-06 23:32:42,697 DEBUG   SenderThread:28319 [sender.py:send():90] send: footer
+2020-12-06 23:32:42,697 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:42,697 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: defer
+2020-12-06 23:32:42,698 INFO    SenderThread:28319 [sender.py:send_request_defer():185] handle sender defer: 8
+2020-12-06 23:32:42,868 DEBUG   Thread-15 :28319 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/tzs930/fivo_vrnn/s9p161jk/config.yaml?Expires=1607351562&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=dCRE43CJFduhQMtLENp3xiHAhfAwHX3VKmSZCtGnMxTbokfB2ZuQhwA4zlOC%2BTA3EwoepbBT1xVE5NXPDvbU7C5g0hj3YE0oCPOp3l7COxA9SU3WE1JHz0n%2FaKD0GO%2F38tS92%2BBNk1zhAUFagyR7T9HCgdSdMjRi3cXh0yDrudaO5nn9nbP9rC54szlMTxMt7vuieWpTi4fAOi2jz4qCD%2BqHixUUKScCWWrZdePI7FRrOxAkkxDP%2BW64DE9metJh3tuyyRpduHMd8GCm4X%2Fx7CuJPwPmQmmQ90OMUqUlSztALjyrwgDMcPaeN6E2C0u5%2BDasdBsluw4CWLw%2B0NCBfg%3D%3D HTTP/1.1" 200 0
+2020-12-06 23:32:42,869 INFO    Thread-15 :28319 [upload_job.py:push():131] Uploaded file /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/config.yaml
+2020-12-06 23:32:42,892 DEBUG   Thread-12 :28319 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/tzs930/fivo_vrnn/s9p161jk/requirements.txt?Expires=1607351562&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=RWfTV8rceJUoIhW%2B%2B%2FGiKCV9Sw1MJro%2BGHP82kQgzWhxrantLnctGf%2BRb%2Bcb8WONLa6cZ2E7Jn8fQhCu9pzKbiMpky53t7hB%2F5mH8lGpV2yzsuFPwKTvU3%2FQD6kYsP1hrc7e5L8WUDuNKE3FsmDT3KSVCm%2Bfct%2B4oG3z4hM5PuMJnQ31V2dPza8urwgVBga4vgYrIIXTSI%2Fdvuf8cBjl2hKzHmR65mLfm0fko0bIXD%2BteYASuz1VDZqulbZcS6AnJdle%2BVFciCMyXJAM43mXg%2F1zbg%2FWwU7UD8UoUyWjmPO%2F69zaSHK3TtdpSElldcmpfvzhi%2F75Tzg8w16h3aN5qQ%3D%3D HTTP/1.1" 200 0
+2020-12-06 23:32:42,894 INFO    Thread-12 :28319 [upload_job.py:push():131] Uploaded file /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/requirements.txt
+2020-12-06 23:32:42,895 DEBUG   Thread-13 :28319 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/tzs930/fivo_vrnn/s9p161jk/wandb-summary.json?Expires=1607351562&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=AwRswvQz%2FVIv2mZjLKh2MSzrO7gFefOlPm%2BC4ENMb4ouj4ORbcgI9k5rnfT%2FQeY1HnNqx302i7tgqvZEs%2FvU66Wv47LKlsDPNg482ewOylu%2FfgB6CvAfgEERqUWvrLvJZg1UboRok6%2F%2BshW9dmYR%2Fo4vXd7FqICy155kXYJTaxAQmK9TIPSh2F7oxVf4ZQjx8ZInP9yoU75upMPs%2FYJ2CdjSWI7rnINiqLcIqbekuxIi6%2FRHdOIDqCezdFSKkh%2FboNKatstC9A5mQTo5ctVnXC3qoTiaonrXs4aED5C3cpngGfQjTnQ9m4WChvarqRVz6CLqjyttMyW12UFcOhJ3lQ%3D%3D HTTP/1.1" 200 0
+2020-12-06 23:32:42,897 INFO    Thread-13 :28319 [upload_job.py:push():131] Uploaded file /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/wandb-summary.json
+2020-12-06 23:32:42,915 DEBUG   Thread-14 :28319 [connectionpool.py:_make_request():437] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/tzs930/fivo_vrnn/s9p161jk/output.log?Expires=1607351562&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=lbZ8FmctYSi65mI4CpedNjtz0xGen75YXJpV3PJJUls3WAwmAVxeTapGBGfOIp6nRK0mUIK6n7%2BcR0Jtni8GsddmwR6%2BF5dqJZV4WVz%2F0I8MPCqHwODRgIWcRwQco2tVvh3tlCzNzwNOS%2BZwk3WjlJaA7rpbTwXOJCC24grM07DRlKuHhlZ9w5Cg2yaGKL1H6hQ4dyhb2iZOKm3LrX9WZ6HlUOYI3n5HJArM%2BT%2BX4tVm4rospULsAocFG42RqT%2F7inKh9A1ZWut%2F2FDLAtcg3cro8tBICFzHPrY297hRYW5POwZxdjwX8%2BEj4shXoAPP%2FcA4M1xXkbS63ThLkTRqgg%3D%3D HTTP/1.1" 200 0
+2020-12-06 23:32:42,917 INFO    Thread-14 :28319 [upload_job.py:push():131] Uploaded file /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/files/output.log
+2020-12-06 23:32:43,462 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: poll_exit
+2020-12-06 23:32:43,462 DEBUG   SenderThread:28319 [sender.py:send():90] send: request
+2020-12-06 23:32:43,465 DEBUG   SenderThread:28319 [sender.py:send_request():99] send_request: poll_exit
+2020-12-06 23:32:43,466 INFO    SenderThread:28319 [file_pusher.py:join():174] waiting for file pusher
+2020-12-06 23:32:43,471 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: get_summary
+2020-12-06 23:32:43,473 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: sampled_history
+2020-12-06 23:32:43,475 DEBUG   HandlerThread:28319 [handler.py:handle_request():55] handle_request: shutdown
+2020-12-06 23:32:43,475 INFO    HandlerThread:28319 [handler.py:finish():271] shutting down handler
+2020-12-06 23:32:43,698 INFO    WriterThread:28319 [datastore.py:close():257] close: /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233240-s9p161jk/run-s9p161jk.wandb
+2020-12-06 23:32:44,466 INFO    SenderThread:28319 [sender.py:finish():630] shutting down sender
+2020-12-06 23:32:44,467 INFO    SenderThread:28319 [file_pusher.py:finish():169] shutting down file pusher
+2020-12-06 23:32:44,467 INFO    SenderThread:28319 [file_pusher.py:join():174] waiting for file pusher
+2020-12-06 23:32:44,474 INFO    MainThread:28319 [internal.py:handle_exit():138] Internal process exited

@@ -1,0 +1,1075 @@
+Train Epoch: 1 [0/229 (0%)]	 KLD Loss: 3912.089111 	 NLL Loss: 31257.330078
+====> Epoch: 1 Average loss: 2845.3996
+Train Epoch: 2 [0/229 (0%)]	 KLD Loss: 49.345974 	 NLL Loss: 4571.550293
+====> Epoch: 2 Average loss: 887.8027
+Train Epoch: 3 [0/229 (0%)]	 KLD Loss: 93.105927 	 NLL Loss: 4151.144531
+====> Epoch: 3 Average loss: 762.0704
+Train Epoch: 4 [0/229 (0%)]	 KLD Loss: 25.882914 	 NLL Loss: 3786.774414
+====> Epoch: 4 Average loss: 701.7610
+Train Epoch: 5 [0/229 (0%)]	 KLD Loss: 26.257441 	 NLL Loss: 3709.015137
+====> Epoch: 5 Average loss: 689.1664
+Train Epoch: 6 [0/229 (0%)]	 KLD Loss: 26.102377 	 NLL Loss: 3693.024902
+====> Epoch: 6 Average loss: 684.8009
+Train Epoch: 7 [0/229 (0%)]	 KLD Loss: 21.044827 	 NLL Loss: 3675.018066
+====> Epoch: 7 Average loss: 681.4857
+Train Epoch: 8 [0/229 (0%)]	 KLD Loss: 23.132912 	 NLL Loss: 3663.439941
+====> Epoch: 8 Average loss: 678.5593
+Train Epoch: 9 [0/229 (0%)]	 KLD Loss: 21.132742 	 NLL Loss: 3649.624512
+====> Epoch: 9 Average loss: 676.2040
+Train Epoch: 10 [0/229 (0%)]	 KLD Loss: 21.475363 	 NLL Loss: 3650.532471
+====> Epoch: 10 Average loss: 676.3691
+====> Valid set loss: KLD Loss = 3.5947, NLL Loss = 657.1191 
+Train Epoch: 11 [0/229 (0%)]	 KLD Loss: 26.319132 	 NLL Loss: 3615.415039
+====> Epoch: 11 Average loss: 669.5179
+Train Epoch: 12 [0/229 (0%)]	 KLD Loss: 25.212782 	 NLL Loss: 3606.939941
+====> Epoch: 12 Average loss: 663.1529
+Train Epoch: 13 [0/229 (0%)]	 KLD Loss: 36.366291 	 NLL Loss: 3522.697998
+====> Epoch: 13 Average loss: 656.6982
+Train Epoch: 14 [0/229 (0%)]	 KLD Loss: 55.924923 	 NLL Loss: 3440.066895
+====> Epoch: 14 Average loss: 652.3368
+Train Epoch: 15 [0/229 (0%)]	 KLD Loss: 64.977707 	 NLL Loss: 3409.684082
+====> Epoch: 15 Average loss: 649.1745
+Train Epoch: 16 [0/229 (0%)]	 KLD Loss: 78.696419 	 NLL Loss: 3363.473877
+====> Epoch: 16 Average loss: 645.1850
+Train Epoch: 17 [0/229 (0%)]	 KLD Loss: 70.081085 	 NLL Loss: 3371.563232
+====> Epoch: 17 Average loss: 641.8841
+Train Epoch: 18 [0/229 (0%)]	 KLD Loss: 78.344330 	 NLL Loss: 3348.075928
+====> Epoch: 18 Average loss: 636.4327
+Train Epoch: 19 [0/229 (0%)]	 KLD Loss: 80.619507 	 NLL Loss: 3313.902588
+====> Epoch: 19 Average loss: 631.9219
+Train Epoch: 20 [0/229 (0%)]	 KLD Loss: 100.137337 	 NLL Loss: 3331.287842
+====> Epoch: 20 Average loss: 628.7330
+====> Valid set loss: KLD Loss = 21.4403, NLL Loss = 599.7960 
+Train Epoch: 21 [0/229 (0%)]	 KLD Loss: 102.664772 	 NLL Loss: 3265.263428
+====> Epoch: 21 Average loss: 622.0072
+Train Epoch: 22 [0/229 (0%)]	 KLD Loss: 115.778099 	 NLL Loss: 3228.241943
+====> Epoch: 22 Average loss: 614.2053
+Train Epoch: 23 [0/229 (0%)]	 KLD Loss: 145.330612 	 NLL Loss: 3141.645020
+====> Epoch: 23 Average loss: 605.5475
+Train Epoch: 24 [0/229 (0%)]	 KLD Loss: 154.759369 	 NLL Loss: 3163.801758
+====> Epoch: 24 Average loss: 602.6030
+Train Epoch: 25 [0/229 (0%)]	 KLD Loss: 157.805862 	 NLL Loss: 3134.074707
+====> Epoch: 25 Average loss: 598.4947
+Train Epoch: 26 [0/229 (0%)]	 KLD Loss: 163.689438 	 NLL Loss: 3095.136963
+====> Epoch: 26 Average loss: 593.4399
+Train Epoch: 27 [0/229 (0%)]	 KLD Loss: 173.246811 	 NLL Loss: 3069.927734
+====> Epoch: 27 Average loss: 588.9645
+Train Epoch: 28 [0/229 (0%)]	 KLD Loss: 176.977982 	 NLL Loss: 3062.258789
+====> Epoch: 28 Average loss: 585.4054
+Train Epoch: 29 [0/229 (0%)]	 KLD Loss: 177.488403 	 NLL Loss: 3046.210938
+====> Epoch: 29 Average loss: 579.7315
+Train Epoch: 30 [0/229 (0%)]	 KLD Loss: 206.206406 	 NLL Loss: 2995.646729
+====> Epoch: 30 Average loss: 572.1861
+====> Valid set loss: KLD Loss = 47.0961, NLL Loss = 518.0647 
+Train Epoch: 31 [0/229 (0%)]	 KLD Loss: 227.144745 	 NLL Loss: 2917.791016
+====> Epoch: 31 Average loss: 564.2688
+Train Epoch: 32 [0/229 (0%)]	 KLD Loss: 229.265274 	 NLL Loss: 2874.234863
+====> Epoch: 32 Average loss: 556.6931
+Train Epoch: 33 [0/229 (0%)]	 KLD Loss: 239.553329 	 NLL Loss: 2834.811523
+====> Epoch: 33 Average loss: 545.8353
+Train Epoch: 34 [0/229 (0%)]	 KLD Loss: 271.070740 	 NLL Loss: 2783.185791
+====> Epoch: 34 Average loss: 532.9755
+Train Epoch: 35 [0/229 (0%)]	 KLD Loss: 282.228027 	 NLL Loss: 2779.023193
+====> Epoch: 35 Average loss: 523.1618
+Train Epoch: 36 [0/229 (0%)]	 KLD Loss: 316.362396 	 NLL Loss: 2725.383545
+====> Epoch: 36 Average loss: 513.5922
+Train Epoch: 37 [0/229 (0%)]	 KLD Loss: 293.098999 	 NLL Loss: 2675.293213
+====> Epoch: 37 Average loss: 506.9639
+Train Epoch: 38 [0/229 (0%)]	 KLD Loss: 304.076050 	 NLL Loss: 2670.251709
+====> Epoch: 38 Average loss: 503.1761
+Train Epoch: 39 [0/229 (0%)]	 KLD Loss: 300.592010 	 NLL Loss: 2705.804932
+====> Epoch: 39 Average loss: 500.4079
+Train Epoch: 40 [0/229 (0%)]	 KLD Loss: 315.463013 	 NLL Loss: 2707.997070
+====> Epoch: 40 Average loss: 498.0418
+====> Valid set loss: KLD Loss = 64.1888, NLL Loss = 445.8574 
+Train Epoch: 41 [0/229 (0%)]	 KLD Loss: 314.343201 	 NLL Loss: 2656.837646
+====> Epoch: 41 Average loss: 494.9624
+Train Epoch: 42 [0/229 (0%)]	 KLD Loss: 334.589355 	 NLL Loss: 2566.686523
+====> Epoch: 42 Average loss: 488.5463
+Train Epoch: 43 [0/229 (0%)]	 KLD Loss: 343.689636 	 NLL Loss: 2558.378418
+====> Epoch: 43 Average loss: 486.4648
+Train Epoch: 44 [0/229 (0%)]	 KLD Loss: 348.134583 	 NLL Loss: 2590.146240
+====> Epoch: 44 Average loss: 482.8382
+Train Epoch: 45 [0/229 (0%)]	 KLD Loss: 346.783630 	 NLL Loss: 2537.732910
+====> Epoch: 45 Average loss: 480.6337
+Train Epoch: 46 [0/229 (0%)]	 KLD Loss: 346.191681 	 NLL Loss: 2502.826172
+====> Epoch: 46 Average loss: 478.5761
+Train Epoch: 47 [0/229 (0%)]	 KLD Loss: 352.795319 	 NLL Loss: 2490.138428
+====> Epoch: 47 Average loss: 475.3742
+Train Epoch: 48 [0/229 (0%)]	 KLD Loss: 345.535553 	 NLL Loss: 2521.296143
+====> Epoch: 48 Average loss: 472.6989
+Train Epoch: 49 [0/229 (0%)]	 KLD Loss: 356.565216 	 NLL Loss: 2467.544434
+====> Epoch: 49 Average loss: 469.7745
+Train Epoch: 50 [0/229 (0%)]	 KLD Loss: 337.904755 	 NLL Loss: 2507.556885
+====> Epoch: 50 Average loss: 468.2819
+====> Valid set loss: KLD Loss = 70.5605, NLL Loss = 411.9877 
+Train Epoch: 51 [0/229 (0%)]	 KLD Loss: 331.606140 	 NLL Loss: 2479.869385
+====> Epoch: 51 Average loss: 464.5594
+Train Epoch: 52 [0/229 (0%)]	 KLD Loss: 341.997925 	 NLL Loss: 2427.578125
+====> Epoch: 52 Average loss: 461.7873
+Train Epoch: 53 [0/229 (0%)]	 KLD Loss: 356.143097 	 NLL Loss: 2380.988525
+====> Epoch: 53 Average loss: 459.6908
+Train Epoch: 54 [0/229 (0%)]	 KLD Loss: 396.117188 	 NLL Loss: 2347.849854
+====> Epoch: 54 Average loss: 458.2966
+Train Epoch: 55 [0/229 (0%)]	 KLD Loss: 387.375397 	 NLL Loss: 2349.298340
+====> Epoch: 55 Average loss: nan
+Train Epoch: 56 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 56 Average loss: nan
+Train Epoch: 57 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 57 Average loss: nan
+Train Epoch: 58 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 58 Average loss: nan
+Train Epoch: 59 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 59 Average loss: nan
+Train Epoch: 60 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 60 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 61 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 61 Average loss: nan
+Train Epoch: 62 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 62 Average loss: nan
+Train Epoch: 63 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 63 Average loss: nan
+Train Epoch: 64 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 64 Average loss: nan
+Train Epoch: 65 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 65 Average loss: nan
+Train Epoch: 66 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 66 Average loss: nan
+Train Epoch: 67 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 67 Average loss: nan
+Train Epoch: 68 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 68 Average loss: nan
+Train Epoch: 69 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 69 Average loss: nan
+Train Epoch: 70 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 70 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 71 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 71 Average loss: nan
+Train Epoch: 72 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 72 Average loss: nan
+Train Epoch: 73 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 73 Average loss: nan
+Train Epoch: 74 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 74 Average loss: nan
+Train Epoch: 75 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 75 Average loss: nan
+Train Epoch: 76 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 76 Average loss: nan
+Train Epoch: 77 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 77 Average loss: nan
+Train Epoch: 78 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 78 Average loss: nan
+Train Epoch: 79 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 79 Average loss: nan
+Train Epoch: 80 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 80 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 81 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 81 Average loss: nan
+Train Epoch: 82 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 82 Average loss: nan
+Train Epoch: 83 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 83 Average loss: nan
+Train Epoch: 84 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 84 Average loss: nan
+Train Epoch: 85 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 85 Average loss: nan
+Train Epoch: 86 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 86 Average loss: nan
+Train Epoch: 87 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 87 Average loss: nan
+Train Epoch: 88 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 88 Average loss: nan
+Train Epoch: 89 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 89 Average loss: nan
+Train Epoch: 90 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 90 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 91 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 91 Average loss: nan
+Train Epoch: 92 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 92 Average loss: nan
+Train Epoch: 93 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 93 Average loss: nan
+Train Epoch: 94 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 94 Average loss: nan
+Train Epoch: 95 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 95 Average loss: nan
+Train Epoch: 96 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 96 Average loss: nan
+Train Epoch: 97 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 97 Average loss: nan
+Train Epoch: 98 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 98 Average loss: nan
+Train Epoch: 99 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 99 Average loss: nan
+Train Epoch: 100 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 100 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Saved model to saves/vrnn_state_dict_100.pth
+Train Epoch: 101 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 101 Average loss: nan
+Train Epoch: 102 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 102 Average loss: nan
+Train Epoch: 103 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 103 Average loss: nan
+Train Epoch: 104 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 104 Average loss: nan
+Train Epoch: 105 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 105 Average loss: nan
+Train Epoch: 106 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 106 Average loss: nan
+Train Epoch: 107 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 107 Average loss: nan
+Train Epoch: 108 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 108 Average loss: nan
+Train Epoch: 109 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 109 Average loss: nan
+Train Epoch: 110 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 110 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 111 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 111 Average loss: nan
+Train Epoch: 112 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 112 Average loss: nan
+Train Epoch: 113 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 113 Average loss: nan
+Train Epoch: 114 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 114 Average loss: nan
+Train Epoch: 115 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 115 Average loss: nan
+Train Epoch: 116 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 116 Average loss: nan
+Train Epoch: 117 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 117 Average loss: nan
+Train Epoch: 118 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 118 Average loss: nan
+Train Epoch: 119 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 119 Average loss: nan
+Train Epoch: 120 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 120 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 121 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 121 Average loss: nan
+Train Epoch: 122 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 122 Average loss: nan
+Train Epoch: 123 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 123 Average loss: nan
+Train Epoch: 124 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 124 Average loss: nan
+Train Epoch: 125 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 125 Average loss: nan
+Train Epoch: 126 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 126 Average loss: nan
+Train Epoch: 127 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 127 Average loss: nan
+Train Epoch: 128 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 128 Average loss: nan
+Train Epoch: 129 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 129 Average loss: nan
+Train Epoch: 130 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 130 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 131 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 131 Average loss: nan
+Train Epoch: 132 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 132 Average loss: nan
+Train Epoch: 133 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 133 Average loss: nan
+Train Epoch: 134 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 134 Average loss: nan
+Train Epoch: 135 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 135 Average loss: nan
+Train Epoch: 136 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 136 Average loss: nan
+Train Epoch: 137 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 137 Average loss: nan
+Train Epoch: 138 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 138 Average loss: nan
+Train Epoch: 139 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 139 Average loss: nan
+Train Epoch: 140 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 140 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 141 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 141 Average loss: nan
+Train Epoch: 142 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 142 Average loss: nan
+Train Epoch: 143 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 143 Average loss: nan
+Train Epoch: 144 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 144 Average loss: nan
+Train Epoch: 145 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 145 Average loss: nan
+Train Epoch: 146 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 146 Average loss: nan
+Train Epoch: 147 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 147 Average loss: nan
+Train Epoch: 148 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 148 Average loss: nan
+Train Epoch: 149 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 149 Average loss: nan
+Train Epoch: 150 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 150 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 151 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 151 Average loss: nan
+Train Epoch: 152 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 152 Average loss: nan
+Train Epoch: 153 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 153 Average loss: nan
+Train Epoch: 154 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 154 Average loss: nan
+Train Epoch: 155 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 155 Average loss: nan
+Train Epoch: 156 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 156 Average loss: nan
+Train Epoch: 157 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 157 Average loss: nan
+Train Epoch: 158 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 158 Average loss: nan
+Train Epoch: 159 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 159 Average loss: nan
+Train Epoch: 160 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 160 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 161 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 161 Average loss: nan
+Train Epoch: 162 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 162 Average loss: nan
+Train Epoch: 163 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 163 Average loss: nan
+Train Epoch: 164 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 164 Average loss: nan
+Train Epoch: 165 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 165 Average loss: nan
+Train Epoch: 166 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 166 Average loss: nan
+Train Epoch: 167 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 167 Average loss: nan
+Train Epoch: 168 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 168 Average loss: nan
+Train Epoch: 169 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 169 Average loss: nan
+Train Epoch: 170 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 170 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 171 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 171 Average loss: nan
+Train Epoch: 172 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 172 Average loss: nan
+Train Epoch: 173 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 173 Average loss: nan
+Train Epoch: 174 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 174 Average loss: nan
+Train Epoch: 175 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 175 Average loss: nan
+Train Epoch: 176 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 176 Average loss: nan
+Train Epoch: 177 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 177 Average loss: nan
+Train Epoch: 178 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 178 Average loss: nan
+Train Epoch: 179 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 179 Average loss: nan
+Train Epoch: 180 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 180 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 181 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 181 Average loss: nan
+Train Epoch: 182 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 182 Average loss: nan
+Train Epoch: 183 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 183 Average loss: nan
+Train Epoch: 184 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 184 Average loss: nan
+Train Epoch: 185 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 185 Average loss: nan
+Train Epoch: 186 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 186 Average loss: nan
+Train Epoch: 187 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 187 Average loss: nan
+Train Epoch: 188 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 188 Average loss: nan
+Train Epoch: 189 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 189 Average loss: nan
+Train Epoch: 190 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 190 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 191 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 191 Average loss: nan
+Train Epoch: 192 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 192 Average loss: nan
+Train Epoch: 193 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 193 Average loss: nan
+Train Epoch: 194 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 194 Average loss: nan
+Train Epoch: 195 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 195 Average loss: nan
+Train Epoch: 196 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 196 Average loss: nan
+Train Epoch: 197 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 197 Average loss: nan
+Train Epoch: 198 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 198 Average loss: nan
+Train Epoch: 199 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 199 Average loss: nan
+Train Epoch: 200 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 200 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Saved model to saves/vrnn_state_dict_200.pth
+Train Epoch: 201 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 201 Average loss: nan
+Train Epoch: 202 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 202 Average loss: nan
+Train Epoch: 203 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 203 Average loss: nan
+Train Epoch: 204 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 204 Average loss: nan
+Train Epoch: 205 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 205 Average loss: nan
+Train Epoch: 206 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 206 Average loss: nan
+Train Epoch: 207 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 207 Average loss: nan
+Train Epoch: 208 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 208 Average loss: nan
+Train Epoch: 209 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 209 Average loss: nan
+Train Epoch: 210 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 210 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 211 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 211 Average loss: nan
+Train Epoch: 212 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 212 Average loss: nan
+Train Epoch: 213 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 213 Average loss: nan
+Train Epoch: 214 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 214 Average loss: nan
+Train Epoch: 215 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 215 Average loss: nan
+Train Epoch: 216 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 216 Average loss: nan
+Train Epoch: 217 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 217 Average loss: nan
+Train Epoch: 218 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 218 Average loss: nan
+Train Epoch: 219 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 219 Average loss: nan
+Train Epoch: 220 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 220 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 221 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 221 Average loss: nan
+Train Epoch: 222 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 222 Average loss: nan
+Train Epoch: 223 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 223 Average loss: nan
+Train Epoch: 224 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 224 Average loss: nan
+Train Epoch: 225 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 225 Average loss: nan
+Train Epoch: 226 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 226 Average loss: nan
+Train Epoch: 227 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 227 Average loss: nan
+Train Epoch: 228 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 228 Average loss: nan
+Train Epoch: 229 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 229 Average loss: nan
+Train Epoch: 230 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 230 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 231 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 231 Average loss: nan
+Train Epoch: 232 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 232 Average loss: nan
+Train Epoch: 233 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 233 Average loss: nan
+Train Epoch: 234 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 234 Average loss: nan
+Train Epoch: 235 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 235 Average loss: nan
+Train Epoch: 236 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 236 Average loss: nan
+Train Epoch: 237 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 237 Average loss: nan
+Train Epoch: 238 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 238 Average loss: nan
+Train Epoch: 239 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 239 Average loss: nan
+Train Epoch: 240 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 240 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 241 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 241 Average loss: nan
+Train Epoch: 242 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 242 Average loss: nan
+Train Epoch: 243 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 243 Average loss: nan
+Train Epoch: 244 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 244 Average loss: nan
+Train Epoch: 245 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 245 Average loss: nan
+Train Epoch: 246 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 246 Average loss: nan
+Train Epoch: 247 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 247 Average loss: nan
+Train Epoch: 248 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 248 Average loss: nan
+Train Epoch: 249 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 249 Average loss: nan
+Train Epoch: 250 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 250 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 251 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 251 Average loss: nan
+Train Epoch: 252 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 252 Average loss: nan
+Train Epoch: 253 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 253 Average loss: nan
+Train Epoch: 254 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 254 Average loss: nan
+Train Epoch: 255 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 255 Average loss: nan
+Train Epoch: 256 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 256 Average loss: nan
+Train Epoch: 257 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 257 Average loss: nan
+Train Epoch: 258 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 258 Average loss: nan
+Train Epoch: 259 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 259 Average loss: nan
+Train Epoch: 260 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 260 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 261 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 261 Average loss: nan
+Train Epoch: 262 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 262 Average loss: nan
+Train Epoch: 263 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 263 Average loss: nan
+Train Epoch: 264 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 264 Average loss: nan
+Train Epoch: 265 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 265 Average loss: nan
+Train Epoch: 266 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 266 Average loss: nan
+Train Epoch: 267 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 267 Average loss: nan
+Train Epoch: 268 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 268 Average loss: nan
+Train Epoch: 269 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 269 Average loss: nan
+Train Epoch: 270 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 270 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 271 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 271 Average loss: nan
+Train Epoch: 272 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 272 Average loss: nan
+Train Epoch: 273 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 273 Average loss: nan
+Train Epoch: 274 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 274 Average loss: nan
+Train Epoch: 275 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 275 Average loss: nan
+Train Epoch: 276 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 276 Average loss: nan
+Train Epoch: 277 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 277 Average loss: nan
+Train Epoch: 278 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 278 Average loss: nan
+Train Epoch: 279 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 279 Average loss: nan
+Train Epoch: 280 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 280 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 281 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 281 Average loss: nan
+Train Epoch: 282 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 282 Average loss: nan
+Train Epoch: 283 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 283 Average loss: nan
+Train Epoch: 284 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 284 Average loss: nan
+Train Epoch: 285 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 285 Average loss: nan
+Train Epoch: 286 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 286 Average loss: nan
+Train Epoch: 287 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 287 Average loss: nan
+Train Epoch: 288 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 288 Average loss: nan
+Train Epoch: 289 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 289 Average loss: nan
+Train Epoch: 290 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 290 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 291 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 291 Average loss: nan
+Train Epoch: 292 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 292 Average loss: nan
+Train Epoch: 293 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 293 Average loss: nan
+Train Epoch: 294 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 294 Average loss: nan
+Train Epoch: 295 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 295 Average loss: nan
+Train Epoch: 296 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 296 Average loss: nan
+Train Epoch: 297 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 297 Average loss: nan
+Train Epoch: 298 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 298 Average loss: nan
+Train Epoch: 299 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 299 Average loss: nan
+Train Epoch: 300 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 300 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Saved model to saves/vrnn_state_dict_300.pth
+Train Epoch: 301 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 301 Average loss: nan
+Train Epoch: 302 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 302 Average loss: nan
+Train Epoch: 303 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 303 Average loss: nan
+Train Epoch: 304 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 304 Average loss: nan
+Train Epoch: 305 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 305 Average loss: nan
+Train Epoch: 306 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 306 Average loss: nan
+Train Epoch: 307 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 307 Average loss: nan
+Train Epoch: 308 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 308 Average loss: nan
+Train Epoch: 309 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 309 Average loss: nan
+Train Epoch: 310 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 310 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 311 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 311 Average loss: nan
+Train Epoch: 312 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 312 Average loss: nan
+Train Epoch: 313 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 313 Average loss: nan
+Train Epoch: 314 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 314 Average loss: nan
+Train Epoch: 315 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 315 Average loss: nan
+Train Epoch: 316 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 316 Average loss: nan
+Train Epoch: 317 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 317 Average loss: nan
+Train Epoch: 318 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 318 Average loss: nan
+Train Epoch: 319 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 319 Average loss: nan
+Train Epoch: 320 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 320 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 321 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 321 Average loss: nan
+Train Epoch: 322 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 322 Average loss: nan
+Train Epoch: 323 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 323 Average loss: nan
+Train Epoch: 324 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 324 Average loss: nan
+Train Epoch: 325 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 325 Average loss: nan
+Train Epoch: 326 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 326 Average loss: nan
+Train Epoch: 327 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 327 Average loss: nan
+Train Epoch: 328 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 328 Average loss: nan
+Train Epoch: 329 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 329 Average loss: nan
+Train Epoch: 330 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 330 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 331 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 331 Average loss: nan
+Train Epoch: 332 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 332 Average loss: nan
+Train Epoch: 333 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 333 Average loss: nan
+Train Epoch: 334 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 334 Average loss: nan
+Train Epoch: 335 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 335 Average loss: nan
+Train Epoch: 336 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 336 Average loss: nan
+Train Epoch: 337 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 337 Average loss: nan
+Train Epoch: 338 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 338 Average loss: nan
+Train Epoch: 339 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 339 Average loss: nan
+Train Epoch: 340 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 340 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 341 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 341 Average loss: nan
+Train Epoch: 342 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 342 Average loss: nan
+Train Epoch: 343 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 343 Average loss: nan
+Train Epoch: 344 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 344 Average loss: nan
+Train Epoch: 345 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 345 Average loss: nan
+Train Epoch: 346 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 346 Average loss: nan
+Train Epoch: 347 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 347 Average loss: nan
+Train Epoch: 348 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 348 Average loss: nan
+Train Epoch: 349 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 349 Average loss: nan
+Train Epoch: 350 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 350 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 351 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 351 Average loss: nan
+Train Epoch: 352 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 352 Average loss: nan
+Train Epoch: 353 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 353 Average loss: nan
+Train Epoch: 354 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 354 Average loss: nan
+Train Epoch: 355 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 355 Average loss: nan
+Train Epoch: 356 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 356 Average loss: nan
+Train Epoch: 357 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 357 Average loss: nan
+Train Epoch: 358 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 358 Average loss: nan
+Train Epoch: 359 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 359 Average loss: nan
+Train Epoch: 360 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 360 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 361 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 361 Average loss: nan
+Train Epoch: 362 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 362 Average loss: nan
+Train Epoch: 363 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 363 Average loss: nan
+Train Epoch: 364 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 364 Average loss: nan
+Train Epoch: 365 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 365 Average loss: nan
+Train Epoch: 366 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 366 Average loss: nan
+Train Epoch: 367 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 367 Average loss: nan
+Train Epoch: 368 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 368 Average loss: nan
+Train Epoch: 369 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 369 Average loss: nan
+Train Epoch: 370 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 370 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 371 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 371 Average loss: nan
+Train Epoch: 372 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 372 Average loss: nan
+Train Epoch: 373 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 373 Average loss: nan
+Train Epoch: 374 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 374 Average loss: nan
+Train Epoch: 375 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 375 Average loss: nan
+Train Epoch: 376 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 376 Average loss: nan
+Train Epoch: 377 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 377 Average loss: nan
+Train Epoch: 378 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 378 Average loss: nan
+Train Epoch: 379 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 379 Average loss: nan
+Train Epoch: 380 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 380 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 381 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 381 Average loss: nan
+Train Epoch: 382 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 382 Average loss: nan
+Train Epoch: 383 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 383 Average loss: nan
+Train Epoch: 384 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 384 Average loss: nan
+Train Epoch: 385 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 385 Average loss: nan
+Train Epoch: 386 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 386 Average loss: nan
+Train Epoch: 387 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 387 Average loss: nan
+Train Epoch: 388 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 388 Average loss: nan
+Train Epoch: 389 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 389 Average loss: nan
+Train Epoch: 390 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 390 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 391 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 391 Average loss: nan
+Train Epoch: 392 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 392 Average loss: nan
+Train Epoch: 393 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 393 Average loss: nan
+Train Epoch: 394 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 394 Average loss: nan
+Train Epoch: 395 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 395 Average loss: nan
+Train Epoch: 396 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 396 Average loss: nan
+Train Epoch: 397 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 397 Average loss: nan
+Train Epoch: 398 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 398 Average loss: nan
+Train Epoch: 399 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 399 Average loss: nan
+Train Epoch: 400 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 400 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Saved model to saves/vrnn_state_dict_400.pth
+Train Epoch: 401 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 401 Average loss: nan
+Train Epoch: 402 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 402 Average loss: nan
+Train Epoch: 403 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 403 Average loss: nan
+Train Epoch: 404 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 404 Average loss: nan
+Train Epoch: 405 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 405 Average loss: nan
+Train Epoch: 406 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 406 Average loss: nan
+Train Epoch: 407 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 407 Average loss: nan
+Train Epoch: 408 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 408 Average loss: nan
+Train Epoch: 409 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 409 Average loss: nan
+Train Epoch: 410 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 410 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 411 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 411 Average loss: nan
+Train Epoch: 412 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 412 Average loss: nan
+Train Epoch: 413 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 413 Average loss: nan
+Train Epoch: 414 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 414 Average loss: nan
+Train Epoch: 415 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 415 Average loss: nan
+Train Epoch: 416 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 416 Average loss: nan
+Train Epoch: 417 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 417 Average loss: nan
+Train Epoch: 418 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 418 Average loss: nan
+Train Epoch: 419 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 419 Average loss: nan
+Train Epoch: 420 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 420 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 421 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 421 Average loss: nan
+Train Epoch: 422 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 422 Average loss: nan
+Train Epoch: 423 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 423 Average loss: nan
+Train Epoch: 424 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 424 Average loss: nan
+Train Epoch: 425 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 425 Average loss: nan
+Train Epoch: 426 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 426 Average loss: nan
+Train Epoch: 427 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 427 Average loss: nan
+Train Epoch: 428 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 428 Average loss: nan
+Train Epoch: 429 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 429 Average loss: nan
+Train Epoch: 430 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 430 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 431 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 431 Average loss: nan
+Train Epoch: 432 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 432 Average loss: nan
+Train Epoch: 433 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 433 Average loss: nan
+Train Epoch: 434 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 434 Average loss: nan
+Train Epoch: 435 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 435 Average loss: nan
+Train Epoch: 436 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 436 Average loss: nan
+Train Epoch: 437 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 437 Average loss: nan
+Train Epoch: 438 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 438 Average loss: nan
+Train Epoch: 439 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 439 Average loss: nan
+Train Epoch: 440 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 440 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 441 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 441 Average loss: nan
+Train Epoch: 442 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 442 Average loss: nan
+Train Epoch: 443 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 443 Average loss: nan
+Train Epoch: 444 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 444 Average loss: nan
+Train Epoch: 445 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 445 Average loss: nan
+Train Epoch: 446 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 446 Average loss: nan
+Train Epoch: 447 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 447 Average loss: nan
+Train Epoch: 448 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 448 Average loss: nan
+Train Epoch: 449 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 449 Average loss: nan
+Train Epoch: 450 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 450 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 451 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 451 Average loss: nan
+Train Epoch: 452 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 452 Average loss: nan
+Train Epoch: 453 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 453 Average loss: nan
+Train Epoch: 454 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 454 Average loss: nan
+Train Epoch: 455 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 455 Average loss: nan
+Train Epoch: 456 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 456 Average loss: nan
+Train Epoch: 457 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 457 Average loss: nan
+Train Epoch: 458 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 458 Average loss: nan
+Train Epoch: 459 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 459 Average loss: nan
+Train Epoch: 460 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 460 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 461 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 461 Average loss: nan
+Train Epoch: 462 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 462 Average loss: nan
+Train Epoch: 463 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 463 Average loss: nan
+Train Epoch: 464 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 464 Average loss: nan
+Train Epoch: 465 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 465 Average loss: nan
+Train Epoch: 466 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 466 Average loss: nan
+Train Epoch: 467 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 467 Average loss: nan
+Train Epoch: 468 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 468 Average loss: nan
+Train Epoch: 469 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 469 Average loss: nan
+Train Epoch: 470 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 470 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 471 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 471 Average loss: nan
+Train Epoch: 472 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 472 Average loss: nan
+Train Epoch: 473 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 473 Average loss: nan
+Train Epoch: 474 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 474 Average loss: nan
+Train Epoch: 475 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 475 Average loss: nan
+Train Epoch: 476 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 476 Average loss: nan
+Train Epoch: 477 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 477 Average loss: nan
+Train Epoch: 478 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 478 Average loss: nan
+Train Epoch: 479 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 479 Average loss: nan
+Train Epoch: 480 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 480 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 481 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 481 Average loss: nan
+Train Epoch: 482 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 482 Average loss: nan
+Train Epoch: 483 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 483 Average loss: nan
+Train Epoch: 484 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 484 Average loss: nan
+Train Epoch: 485 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 485 Average loss: nan
+Train Epoch: 486 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 486 Average loss: nan
+Train Epoch: 487 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 487 Average loss: nan
+Train Epoch: 488 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 488 Average loss: nan
+Train Epoch: 489 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 489 Average loss: nan
+Train Epoch: 490 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 490 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Train Epoch: 491 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 491 Average loss: nan
+Train Epoch: 492 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 492 Average loss: nan
+Train Epoch: 493 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 493 Average loss: nan
+Train Epoch: 494 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 494 Average loss: nan
+Train Epoch: 495 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 495 Average loss: nan
+Train Epoch: 496 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 496 Average loss: nan
+Train Epoch: 497 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 497 Average loss: nan
+Train Epoch: 498 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 498 Average loss: nan
+Train Epoch: 499 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 499 Average loss: nan
+Train Epoch: 500 [0/229 (0%)]	 KLD Loss: nan 	 NLL Loss: nan
+====> Epoch: 500 Average loss: nan
+====> Valid set loss: KLD Loss = nan, NLL Loss = nan 
+Saved model to saves/vrnn_state_dict_500.pth
+Traceback (most recent call last):
+  File "train.py", line 159, in <module>
+    test(epoch)
+  File "train.py", line 101, in test
+    kld_loss, nll_loss, _, _ = model(data)
+  File "/home/syseo/anaconda3/envs/jericho/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/syseo/workspace/FIVO_Gumbel/model.py", line 89, in forward
+    phi_x_t = self.phi_x(x[t])
+  File "/home/syseo/anaconda3/envs/jericho/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/syseo/anaconda3/envs/jericho/lib/python3.7/site-packages/torch/nn/modules/container.py", line 100, in forward
+    input = module(input)
+  File "/home/syseo/anaconda3/envs/jericho/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/syseo/anaconda3/envs/jericho/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 87, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/syseo/anaconda3/envs/jericho/lib/python3.7/site-packages/torch/nn/functional.py", line 1372, in linear
+    output = input.matmul(weight.t())
+RuntimeError: size mismatch, m1: [1 x 159], m2: [88 x 100] at /pytorch/aten/src/TH/generic/THTensorMath.cpp:136

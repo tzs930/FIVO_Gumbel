@@ -1,0 +1,21 @@
+train.py:40: UserWarning: torch.nn.utils.clip_grad_norm is now deprecated in favor of torch.nn.utils.clip_grad_norm_.
+  nn.utils.clip_grad_norm(model.parameters(), clip)
+Train Epoch: 1 [0/229 (0%)]	 KLD Loss: 3912.089355 	 NLL Loss: 31257.330078
+====> Epoch: 1 Average loss: 2845.3996
+Train Epoch: 2 [0/229 (0%)]	 KLD Loss: 49.345928 	 NLL Loss: 4571.550781
+====> Epoch: 2 Average loss: 887.8027
+Train Epoch: 3 [0/229 (0%)]	 KLD Loss: 93.105934 	 NLL Loss: 4151.144531
+Traceback (most recent call last):
+  File "train.py", line 148, in <module>
+    train(epoch)
+  File "train.py", line 34, in train
+    kld_loss, nll_loss, _, _ = model(data)
+  File "/home/syseo/anaconda3/envs/jericho/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/syseo/workspace/FIVO_Gumbel/model.py", line 126, in forward
+    kld_loss += self._kld_gauss_dist(enc_mean_t, enc_std_t, prior_mean_t, prior_std_t)
+  File "/home/syseo/workspace/FIVO_Gumbel/model.py", line 202, in _kld_gauss_dist
+    diag_normal2 = torch.distributions.MultivariateNormal(loc=mean_2, covariance_matrix=cov2)
+  File "/home/syseo/anaconda3/envs/jericho/lib/python3.7/site-packages/torch/distributions/multivariate_normal.py", line 125, in __init__
+    loc_ = loc.unsqueeze(-1)  # temporarily add dim on right
+KeyboardInterrupt

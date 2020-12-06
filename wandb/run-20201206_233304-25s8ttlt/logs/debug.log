@@ -1,0 +1,13 @@
+2020-12-06 23:33:04,792 INFO    MainThread:584 [wandb_setup.py:_flush():68] setting env: {}
+2020-12-06 23:33:04,792 INFO    MainThread:584 [wandb_setup.py:_flush():68] multiprocessing start_methods=fork,spawn,forkserver
+2020-12-06 23:33:04,792 INFO    MainThread:584 [wandb_setup.py:_flush():68] setting login settings: {}
+2020-12-06 23:33:04,792 INFO    MainThread:584 [wandb_init.py:_log_setup():302] Logging user logs to /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233304-25s8ttlt/logs/debug.log
+2020-12-06 23:33:04,793 INFO    MainThread:584 [wandb_init.py:_log_setup():303] Logging internal logs to /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201206_233304-25s8ttlt/logs/debug-internal.log
+2020-12-06 23:33:06,765 INFO    MainThread:584 [wandb_run.py:_console_start():1213] atexit reg
+2020-12-06 23:33:06,768 INFO    MainThread:584 [wandb_run.py:_redirect():1083] redirect: SettingsConsole.REDIRECT
+2020-12-06 23:33:06,769 INFO    MainThread:584 [wandb_run.py:_redirect():1086] Redirecting console.
+2020-12-06 23:33:06,769 INFO    MainThread:584 [redirect.py:install():204] install start
+2020-12-06 23:33:06,770 INFO    MainThread:584 [redirect.py:install():219] install stop
+2020-12-06 23:33:06,770 INFO    MainThread:584 [redirect.py:install():204] install start
+2020-12-06 23:33:06,774 INFO    MainThread:584 [redirect.py:install():219] install stop
+2020-12-06 23:33:06,774 INFO    MainThread:584 [wandb_run.py:_redirect():1130] Redirects installed.

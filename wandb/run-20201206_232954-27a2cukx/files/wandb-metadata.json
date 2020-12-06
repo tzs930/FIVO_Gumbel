@@ -1,0 +1,22 @@
+{
+    "os": "Linux-5.4.0-56-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.6",
+    "heartbeatAt": "2020-12-06T14:29:55.851246",
+    "startedAt": "2020-12-06T14:29:54.066232",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "codePath": "train.py",
+    "program": "/home/syseo/workspace/FIVO_Gumbel/train.py",
+    "git": {
+        "remote": "https://github.com/tzs930/FIVO_Gumbel.git",
+        "commit": "ac7601de663eb8cc686dac8ae76771ab52ab27a2"
+    },
+    "email": "tzs930@gmail.com",
+    "root": "/home/syseo/workspace/FIVO_Gumbel",
+    "host": "syseo-ailab",
+    "username": "syseo",
+    "executable": "/home/syseo/anaconda3/envs/jericho/bin/python"
+}
