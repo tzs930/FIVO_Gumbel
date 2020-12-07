@@ -5,7 +5,7 @@ import torch.utils
 import torch.utils.data
 from torchvision import datasets, transforms
 from torch.autograd import Variable
-import matplotlib.pyplot as plt 
+#import matplotlib.pyplot as plt 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 from torch.distributions import MultivariateNormal, Bernoulli
@@ -95,7 +95,7 @@ class VRNN(nn.Module):
 		log_hat_ps = [0.]
 		log_hat_p_acc = 0.
 
-		logw0 = torch.log(torch.ones(self.num_zs, x.size(1), requires_grad=False) / float(self.num_zs))
+		logw0 = torch.log(torch.ones(self.num_zs, x.size(1), requires_grad=False).to(device) / float(self.num_zs))
 		logweight = logw0		
 		
 		# ws = torch.ones(x.size(0), self.num_zs, x.size(1), requires_grad=False) / float(self.num_zs)

@@ -5,7 +5,7 @@ import torch.utils
 import torch.utils.data
 from torchvision import datasets, transforms
 from torch.autograd import Variable
-import matplotlib.pyplot as plt 
+#import matplotlib.pyplot as plt 
 from model import VRNN
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -25,7 +25,7 @@ def generate_seq_mask(lengths, seq_len, batch_size):
 	mask = torch.zeros(batch_size, seq_len)
 	for i, leng in enumerate(lengths):
 		mask[i][:leng] = 1.
-	return mask.T
+	return mask.T.to(device)
 
 def train(epoch):
 	train_loss = 0
