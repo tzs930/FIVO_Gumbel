@@ -75,7 +75,7 @@ class VRNN(nn.Module):
 		self.rnn = nn.LSTM(h_dim + h_dim, h_dim, n_layers, bias)
 
 
-	def forward(self, x):
+	def forward(self, x, mask):
 
 		all_enc_mean, all_enc_std = [], []
 		all_dec_mean, all_dec_std = [], []
@@ -120,14 +120,14 @@ class VRNN(nn.Module):
 				#encoder
 				enc_t = self.enc(torch.cat([phi_x_t, h[-1][i]], 1))
 				enc_mean_t = self.enc_mean(enc_t)
-				enc_std_t = self.enc_std(enc_t) #+ 1e-7
+				enc_std_t = self.enc_std(enc_t) + 1e-7
 				
 				encoder_dist = MultivariateNormal(enc_mean_t, scale_tril=torch.diag_embed(enc_std_t))
 
 				#prior
 				prior_t = self.prior(h[-1][i])
 				prior_mean_t = self.prior_mean(prior_t)
-				prior_std_t = self.prior_std(prior_t) #+ 1.
+				prior_std_t = self.prior_std(prior_t) + 1e-2
 
 				prior_dist = MultivariateNormal(prior_mean_t, scale_tril=torch.diag_embed(prior_std_t))
 			
@@ -162,7 +162,7 @@ class VRNN(nn.Module):
 				# nll_loss += self._nll_bernoulli(dec_mean_t, x[t])
 				
 			# log_hat_p = log_hat_ps[t] + torch.log(hat_p)
-			log_hat_p_acc += torch.log(hat_p)
+			log_hat_p_acc += torch.log(hat_p) * mask[t]
 			logweight = logweight - torch.log(hat_p.detach())
 			# logwold = logwnew
 			log_hat_ps.append(log_hat_p_acc)

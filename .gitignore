@@ -1,3 +1,4 @@
 saves
 .vscode
 __pycache__
+.wandb

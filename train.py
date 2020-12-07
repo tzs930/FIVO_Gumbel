@@ -21,19 +21,26 @@ if USEWANDB:
 	import wandb
 	wandb.init(project="fivo_vrnn")
 
+def generate_seq_mask(lengths, seq_len, batch_size):
+	mask = torch.zeros(batch_size, seq_len)
+	for i, leng in enumerate(lengths):
+		mask[i][:leng] = 1.
+	return mask.T
+
 def train(epoch):
 	train_loss = 0
 	for batch_idx, (data, _, lengths) in enumerate(train_loader):		
 		max_length = lengths.max()
 		data = data.transpose(0, 1)  # (num_seq, batch_size, num_notes)
-		data = data[:max_length]
+		# data = data[:max_length]
+		mask = generate_seq_mask(lengths, data.shape[0], data.shape[1])
 		# rescale data
 		# data = (data - data.min()) / (data.max() - data.min())
 		
 		#forward + backward + optimize
 		optimizer.zero_grad()
 		# fivo_loss, kld_loss, nll_loss, _, _, all_fivo_loss = model(data)
-		fivo_loss = model(data)
+		fivo_loss = model(data, mask)
 		# loss = kld_loss + nll_loss
 		loss = fivo_loss
 		# with torch.autograd.set_detect_anomaly(True):
@@ -41,7 +48,7 @@ def train(epoch):
 		optimizer.step()
 
 		#grad norm clipping, only in pytorch version >= 1.10
-		nn.utils.clip_grad_norm(model.parameters(), clip)
+		# nn.utils.clip_grad_norm_(model.parameters(), clip)
 
 		#printing
 		if batch_idx % print_every == 0:
@@ -58,7 +65,6 @@ def train(epoch):
 
 		train_loss += loss.item()
 
-
 	print('====> Epoch: {} Average loss: {:.4f}'.format(
 		epoch, train_loss / len(train_loader.dataset)))
 	
@@ -74,13 +80,14 @@ def evaluate(epoch):
 	
 	# mean_kld_loss, mean_nll_loss = 0, 0
 	mean_loss = 0
-	for i, (data, _, _) in enumerate(valid_loader):
-		#data = Variable(data)
+	for i, (data, _, lengths) in enumerate(valid_loader):
+		#data = Variable(data)		
 		data = Variable(data.squeeze().transpose(0, 1))
+		mask = generate_seq_mask(lengths, data.shape[0], data.shape[1])
 		# data = (data - data.min()) / (data.max() - data.min())
 
 		# kld_loss, nll_loss, _, _ = model(data)
-		loss = model(data)
+		loss = model(data, mask)
 		# mean_kld_loss += kld_loss.item()
 		# mean_nll_loss += nll_loss.item()
     
@@ -132,7 +139,7 @@ n_layers =  1
 n_epochs = 100
 clip = 10
 learning_rate = 3e-5
-batch_size = 8
+batch_size = 4
 num_particles = 4
 seed = 128
 print_every = 100
