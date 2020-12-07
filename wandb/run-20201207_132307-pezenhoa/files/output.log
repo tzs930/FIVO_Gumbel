@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "train.py", line 167, in <module>
+    train(epoch)
+  File "train.py", line 43, in train
+    fivo_loss = model(data, mask)
+  File "/home/syseo/anaconda3/envs/jericho/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/syseo/workspace/FIVO_Gumbel/model.py", line 177, in forward
+    if torch.isnan(log_hat_p_acc):
+RuntimeError: bool value of Tensor with more than one value is ambiguous

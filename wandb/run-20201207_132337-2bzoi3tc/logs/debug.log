@@ -1,0 +1,81 @@
+2020-12-07 13:23:37,403 INFO    MainThread:10697 [wandb_setup.py:_flush():68] setting env: {}
+2020-12-07 13:23:37,404 INFO    MainThread:10697 [wandb_setup.py:_flush():68] multiprocessing start_methods=fork,spawn,forkserver
+2020-12-07 13:23:37,404 INFO    MainThread:10697 [wandb_setup.py:_flush():68] setting login settings: {}
+2020-12-07 13:23:37,404 INFO    MainThread:10697 [wandb_init.py:_log_setup():302] Logging user logs to /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201207_132337-2bzoi3tc/logs/debug.log
+2020-12-07 13:23:37,404 INFO    MainThread:10697 [wandb_init.py:_log_setup():303] Logging internal logs to /home/syseo/workspace/FIVO_Gumbel/wandb/run-20201207_132337-2bzoi3tc/logs/debug-internal.log
+2020-12-07 13:23:38,506 INFO    MainThread:10697 [wandb_run.py:_console_start():1213] atexit reg
+2020-12-07 13:23:38,507 INFO    MainThread:10697 [wandb_run.py:_redirect():1083] redirect: SettingsConsole.REDIRECT
+2020-12-07 13:23:38,508 INFO    MainThread:10697 [wandb_run.py:_redirect():1086] Redirecting console.
+2020-12-07 13:23:38,508 INFO    MainThread:10697 [redirect.py:install():204] install start
+2020-12-07 13:23:38,508 INFO    MainThread:10697 [redirect.py:install():219] install stop
+2020-12-07 13:23:38,508 INFO    MainThread:10697 [redirect.py:install():204] install start
+2020-12-07 13:23:38,508 INFO    MainThread:10697 [redirect.py:install():219] install stop
+2020-12-07 13:23:38,508 INFO    MainThread:10697 [wandb_run.py:_redirect():1130] Redirects installed.
+2020-12-07 13:23:38,698 INFO    MainThread:10697 [wandb_watch.py:watch():33] Watching
+2020-12-07 13:58:30,940 INFO    MainThread:10697 [wandb_run.py:_atexit_cleanup():1186] got exitcode: 1
+2020-12-07 13:58:30,988 INFO    MainThread:10697 [wandb_run.py:_restore():1158] restore
+2020-12-07 13:58:30,990 INFO    MainThread:10697 [redirect.py:uninstall():223] uninstall start
+2020-12-07 13:58:30,991 INFO    MainThread:10697 [redirect.py:_stop():278] _stop: stdout
+2020-12-07 13:58:30,993 INFO    MainThread:10697 [redirect.py:_stop():284] _stop closed: stdout
+2020-12-07 13:58:30,995 INFO    stdout    :10697 [redirect.py:_pipe_relay():120] relay done saw last write: stdout
+2020-12-07 13:58:30,995 INFO    stdout    :10697 [redirect.py:_pipe_relay():136] relay done done: stdout
+2020-12-07 13:58:30,995 INFO    MainThread:10697 [redirect.py:_stop():290] _stop joined: stdout
+2020-12-07 13:58:30,996 INFO    MainThread:10697 [redirect.py:_stop():292] _stop rd closed: stdout
+2020-12-07 13:58:30,997 INFO    MainThread:10697 [redirect.py:uninstall():227] uninstall done
+2020-12-07 13:58:30,997 INFO    MainThread:10697 [redirect.py:uninstall():223] uninstall start
+2020-12-07 13:58:30,998 INFO    MainThread:10697 [redirect.py:_stop():278] _stop: stderr
+2020-12-07 13:58:30,999 INFO    MainThread:10697 [redirect.py:_stop():284] _stop closed: stderr
+2020-12-07 13:58:31,000 INFO    stderr    :10697 [redirect.py:_pipe_relay():120] relay done saw last write: stderr
+2020-12-07 13:58:31,000 INFO    stderr    :10697 [redirect.py:_pipe_relay():136] relay done done: stderr
+2020-12-07 13:58:31,000 INFO    MainThread:10697 [redirect.py:_stop():290] _stop joined: stderr
+2020-12-07 13:58:31,000 INFO    MainThread:10697 [redirect.py:_stop():292] _stop rd closed: stderr
+2020-12-07 13:58:31,000 INFO    MainThread:10697 [redirect.py:uninstall():227] uninstall done
+2020-12-07 13:58:31,006 INFO    MainThread:10697 [wandb_run.py:_wait_for_finish():1300] got exit ret: uuid: "695adad5c0564a5783c46120aec280d8"
+response {
+  poll_exit_response {
+    file_counts {
+      wandb_count: 1
+      media_count: 1
+    }
+    pusher_stats {
+      uploaded_bytes: 5417
+      total_bytes: 5417
+    }
+  }
+}
+
+2020-12-07 13:58:33,011 INFO    MainThread:10697 [wandb_run.py:_wait_for_finish():1300] got exit ret: uuid: "e257e1acd1ff4ab59142829468ed5b2f"
+response {
+  poll_exit_response {
+    file_counts {
+      wandb_count: 5
+      media_count: 1
+    }
+    pusher_stats {
+      uploaded_bytes: 59990
+      total_bytes: 59990
+    }
+  }
+}
+
+2020-12-07 13:58:35,020 INFO    MainThread:10697 [wandb_run.py:_wait_for_finish():1300] got exit ret: uuid: "d154735fb2924ed684a6ae40a6c1abbd"
+response {
+  poll_exit_response {
+    done: true
+    exit_result {
+    }
+    file_counts {
+      wandb_count: 5
+      media_count: 1
+    }
+    pusher_stats {
+      uploaded_bytes: 59990
+      total_bytes: 59990
+    }
+  }
+}
+
+2020-12-07 13:58:36,107 INFO    MainThread:10697 [wandb_run.py:_show_summary():1443] rendering summary
+2020-12-07 13:58:36,108 INFO    MainThread:10697 [wandb_run.py:_show_history():1481] rendering history
+2020-12-07 13:58:36,109 INFO    MainThread:10697 [wandb_run.py:_show_files():1509] logging synced files
+2020-12-07 13:58:36,111 INFO    MainThread:10697 [internal.py:handle_exit():138] Internal process exited

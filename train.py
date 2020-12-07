@@ -48,7 +48,7 @@ def train(epoch):
 		optimizer.step()
 
 		#grad norm clipping, only in pytorch version >= 1.10
-		# nn.utils.clip_grad_norm_(model.parameters(), clip)
+		nn.utils.clip_grad_norm_(model.parameters(), clip)
 
 		#printing
 		if batch_idx % print_every == 0:
@@ -70,7 +70,7 @@ def train(epoch):
 	
 	if USEWANDB:
 		# wandb.log({'train_KLD': kld_loss}, step=epoch)
-		wandb.log({'train_NMLL': loss}, step=epoch)
+		wandb.log({'train_NLL': loss}, step=epoch)
 		# wandb.log({'train_loss': train_loss / len(train_loader.dataset)}, step=epoch)
 
 
@@ -159,6 +159,7 @@ test_loader = jsbdatasets.create_pianoroll_dataset('data_jsb/%s.pkl'%dataset, 't
 
 model = VRNN(x_dim, h_dim, z_dim, n_layers, num_particles).to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+wandb.watch(model)
 
 for epoch in range(1, n_epochs + 1):
 	
