@@ -103,8 +103,8 @@ class VRNN(nn.Module):
 
 		# with torch.autograd.set_detect_anomaly(True):			
 		for t in range(x.size(0)):
-			if (x[t] == 0).all():
-				continue
+			# if (x[t] == 0).all():
+			# 	continue
 
 			# Inference
 			phi_x_t = self.phi_x(x[t])
@@ -120,14 +120,14 @@ class VRNN(nn.Module):
 				#encoder
 				enc_t = self.enc(torch.cat([phi_x_t, h[-1][i]], 1))
 				enc_mean_t = self.enc_mean(enc_t)
-				enc_std_t = self.enc_std(enc_t) + 1e-7
+				enc_std_t = self.enc_std(enc_t)
 				
 				encoder_dist = MultivariateNormal(enc_mean_t, scale_tril=torch.diag_embed(enc_std_t))
 
 				#prior
 				prior_t = self.prior(h[-1][i])
 				prior_mean_t = self.prior_mean(prior_t)
-				prior_std_t = self.prior_std(prior_t) + 1e-2
+				prior_std_t = self.prior_std(prior_t)
 
 				prior_dist = MultivariateNormal(prior_mean_t, scale_tril=torch.diag_embed(prior_std_t))
 			
@@ -154,7 +154,7 @@ class VRNN(nn.Module):
 				
 				# hat_p += torch.exp(logwold[i] + log_alpha_ti)
 				# logwnew[i] = logwold[i] + log_alpha_ti.detach()
-				hat_p += torch.exp(logweight + log_alpha_ti)
+				hat_p += torch.exp(logweight[i] + log_alpha_ti)
 				logweight[i] = logweight[i] + log_alpha_ti.detach()					
 
 				# nll_loss += self._nll_gauss(dec_mean_t, dec_std_t, x[t])
@@ -173,15 +173,16 @@ class VRNN(nn.Module):
 			phi_z_ts = torch.cat(phi_z_t_is, dim=0)
 
 			_, (h, c) = self.rnn(torch.cat([phi_x_ts, phi_z_ts], 1).unsqueeze(0), (h, c))				
-			
+
+			if torch.isnan(log_hat_p_acc).any():
+				import IPython; IPython.embed()			
 			#computing losses						
 			# kld_loss /= self.num_zs
 			# nll_loss /= self.num_zs
 
 		fivo_loss = -log_hat_p_acc.sum()
 
-		if torch.isnan(fivo_loss):
-			import IPython; IPython.embed()
+		
 
 		# return fivo_loss, kld_loss, nll_loss, \
 		# 	(all_enc_mean, all_enc_std), \
