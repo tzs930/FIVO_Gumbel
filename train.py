@@ -6,7 +6,7 @@ import torch.utils.data
 from torchvision import datasets, transforms
 from torch.autograd import Variable
 #import matplotlib.pyplot as plt 
-from model import VRNN
+from model import VRNN, FIVO
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 """implementation of the Variational Recurrent
@@ -39,9 +39,10 @@ def train(epoch):
 		
 		#forward + backward + optimize
 		optimizer.zero_grad()
-		# fivo_loss, kld_loss, nll_loss, _, _, all_fivo_loss = model(data)
-		fivo_loss = model(data, mask)
+		# kld_loss, nll_loss, _, _ = model(data, mask)
 		# loss = kld_loss + nll_loss
+
+		fivo_loss = model(data, mask)		
 		loss = fivo_loss
 		# with torch.autograd.set_detect_anomaly(True):
 		loss.backward()
@@ -52,7 +53,7 @@ def train(epoch):
 
 		#printing
 		if batch_idx % print_every == 0:
-			print('Train Epoch: {} [{}/{} ({:.0f}%)]\t NLL: {:.6f}'.format(epoch, batch_idx * len(data), len(train_loader.dataset), 100. * batch_idx / len(train_loader), loss / len(train_loader)))
+			print('Train Epoch: {} [{}/{} ({:.0f}%)]\t NLL: {:.6f}'.format(epoch, batch_idx, len(train_loader.dataset), 100. * batch_idx / len(train_loader), loss / len(train_loader)))
 			# print('Train Epoch: {} [{}/{} ({:.0f}%)]\t KLD Loss: {:.6f} \t NLL Loss: {:.6f}'.format(
 			# 	epoch, batch_idx * len(data), len(train_loader.dataset),
 			# 	100. * batch_idx / len(train_loader),
@@ -70,15 +71,15 @@ def train(epoch):
 	
 	if USEWANDB:
 		# wandb.log({'train_KLD': kld_loss}, step=epoch)
-		wandb.log({'train_NLL': loss}, step=epoch)
-		# wandb.log({'train_loss': train_loss / len(train_loader.dataset)}, step=epoch)
+		# wandb.log({'train_NLL': loss}, step=epoch)
+		wandb.log({'train_loss': train_loss / len(train_loader.dataset)}, step=epoch)
 
 
 def evaluate(epoch):
 	"""uses test data to evaluate 
 	likelihood of the model"""
 	
-	# mean_kld_loss, mean_nll_loss = 0, 0
+	mean_kld_loss, mean_nll_loss = 0, 0
 	mean_loss = 0
 	for i, (data, _, lengths) in enumerate(valid_loader):
 		#data = Variable(data)		
@@ -86,7 +87,7 @@ def evaluate(epoch):
 		mask = generate_seq_mask(lengths, data.shape[0], data.shape[1])
 		# data = (data - data.min()) / (data.max() - data.min())
 
-		# kld_loss, nll_loss, _, _ = model(data)
+		# kld_loss, nll_loss, _, _ = model(data, mask)
 		loss = model(data, mask)
 		# mean_kld_loss += kld_loss.item()
 		# mean_nll_loss += nll_loss.item()
@@ -142,7 +143,7 @@ learning_rate = 3e-5
 batch_size = 4
 num_particles = 4
 seed = 128
-print_every = 100
+print_every = 10
 valid_every = 5
 save_every = 100
 bound = 'ELBO' # 'IWAE', 'FIVO'
@@ -157,9 +158,11 @@ train_loader = jsbdatasets.create_pianoroll_dataset('data_jsb/%s.pkl'%dataset, '
 valid_loader = jsbdatasets.create_pianoroll_dataset('data_jsb/%s.pkl'%dataset, 'valid', batch_size)
 test_loader = jsbdatasets.create_pianoroll_dataset('data_jsb/%s.pkl'%dataset, 'test', batch_size)
 
-model = VRNN(x_dim, h_dim, z_dim, n_layers, num_particles).to(device)
+# model = VRNN(x_dim, h_dim, z_dim, n_layers, num_particles).to(device)
+model = FIVO(x_dim, h_dim, z_dim, n_layers, num_particles).to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
-wandb.watch(model)
+if USEWANDB:
+	wandb.watch(model)
 
 for epoch in range(1, n_epochs + 1):
 	

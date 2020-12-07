@@ -16,8 +16,186 @@ inference, prior, and generating models."""
 
 
 class VRNN(nn.Module):
-	def __init__(self, x_dim, h_dim, z_dim, n_layers, num_particles, bias=False):
+	def __init__(self, x_dim, h_dim, z_dim, n_layers, bias=False):
 		super(VRNN, self).__init__()
+
+		self.x_dim = x_dim
+		self.h_dim = h_dim
+		self.z_dim = z_dim
+		self.n_layers = n_layers
+
+		self.num_z_particles = 4
+
+		#feature-extracting transformations
+		self.phi_x = nn.Sequential(
+			nn.Linear(x_dim, h_dim),
+			nn.ReLU(),
+			nn.Linear(h_dim, h_dim),
+			nn.ReLU())
+		self.phi_z = nn.Sequential(
+			nn.Linear(z_dim, h_dim),
+			nn.ReLU())
+
+		#encoder
+		self.enc = nn.Sequential(
+			nn.Linear(h_dim + h_dim, h_dim),
+			nn.ReLU(),
+			nn.Linear(h_dim, h_dim),
+			nn.ReLU())
+		self.enc_mean = nn.Linear(h_dim, z_dim)
+		self.enc_std = nn.Sequential(
+			nn.Linear(h_dim, z_dim),
+			nn.Softplus())
+
+		#prior
+		self.prior = nn.Sequential(
+			nn.Linear(h_dim, h_dim),
+			nn.ReLU())
+		self.prior_mean = nn.Linear(h_dim, z_dim)
+		self.prior_std = nn.Sequential(
+			nn.Linear(h_dim, z_dim),
+			nn.Softplus()) 
+
+		#decoder
+		self.dec = nn.Sequential(
+			nn.Linear(h_dim + h_dim, h_dim),
+			nn.ReLU(),
+			nn.Linear(h_dim, h_dim),
+			nn.ReLU())
+		self.dec_std = nn.Sequential(
+			nn.Linear(h_dim, x_dim),
+			nn.Softplus())
+		#self.dec_mean = nn.Linear(h_dim, x_dim)
+		self.dec_mean = nn.Sequential(
+			nn.Linear(h_dim, x_dim),
+			nn.Sigmoid())
+
+		#recurrence
+		# self.rnn = nn.GRU(h_dim + h_dim, h_dim, n_layers, bias)
+		self.rnn = nn.LSTM(h_dim + h_dim, h_dim, n_layers, bias)
+
+
+	def forward(self, x, mask):
+
+		all_enc_mean, all_enc_std = [], []
+		all_dec_mean, all_dec_std = [], []
+		kld_loss = 0
+		nll_loss = 0
+
+		h = Variable(torch.zeros(self.n_layers, x.size(1), self.h_dim)).to(device)
+		c = Variable(torch.zeros(self.n_layers, x.size(1), self.h_dim)).to(device)
+
+		for t in range(x.size(0)):
+			# Inference
+			phi_x_t = self.phi_x(x[t])
+
+			#encoder
+			enc_t = self.enc(torch.cat([phi_x_t, h[-1]], 1))
+			enc_mean_t = self.enc_mean(enc_t)
+			enc_std_t = self.enc_std(enc_t)
+
+			#prior
+			prior_t = self.prior(h[-1])
+			prior_mean_t = self.prior_mean(prior_t)
+			prior_std_t = self.prior_std(prior_t) + 1.
+
+			#sampling and reparameterization
+			z_t = self._reparameterized_sample(enc_mean_t, enc_std_t)
+			phi_z_t = self.phi_z(z_t)
+
+			#decoder
+			dec_t = self.dec(torch.cat([phi_z_t, h[-1]], 1))
+			dec_mean_t = self.dec_mean(dec_t)
+			dec_std_t = self.dec_std(dec_t)
+
+			#recurrence
+			_, (h,c) = self.rnn(torch.cat([phi_x_t, phi_z_t], 1).unsqueeze(0), (h,c))
+
+			#computing losses
+			kld_loss += torch.sum(self._kld_gauss(enc_mean_t, enc_std_t, prior_mean_t, prior_std_t) * mask[t])  # [num_seq_len, batch]
+			#nll_loss += self._nll_gauss(dec_mean_t, dec_std_t, x[t])
+			nll_loss += torch.sum(self._nll_bernoulli(dec_mean_t, x[t]) * mask[t])
+
+			all_enc_std.append(enc_std_t)
+			all_enc_mean.append(enc_mean_t)
+			all_dec_mean.append(dec_mean_t)
+			all_dec_std.append(dec_std_t)
+
+		return kld_loss, nll_loss, \
+			(all_enc_mean, all_enc_std), \
+			(all_dec_mean, all_dec_std)
+
+
+	def sample(self, seq_len):
+
+		sample = torch.zeros(seq_len, self.x_dim)
+
+		h = Variable(torch.zeros(self.n_layers, 1, self.h_dim))
+		c = Variable(torch.zeros(self.n_layers, 1, self.h_dim))
+
+		for t in range(seq_len):
+
+			#prior
+			prior_t = self.prior(h[-1])
+			prior_mean_t = self.prior_mean(prior_t)
+			prior_std_t = self.prior_std(prior_t)
+
+			#sampling and reparameterization
+			z_t = self._reparameterized_sample(prior_mean_t, prior_std_t)
+			phi_z_t = self.phi_z(z_t)
+			
+			#decoder
+			dec_t = self.dec(torch.cat([phi_z_t, h[-1]], 1))
+			dec_mean_t = self.dec_mean(dec_t)
+			#dec_std_t = self.dec_std(dec_t)
+
+			phi_x_t = self.phi_x(dec_mean_t)
+
+			#recurrence
+			_, (h, c) = self.rnn(torch.cat([phi_x_t, phi_z_t], 1).unsqueeze(0), (h, c))
+
+			sample[t] = dec_mean_t.data
+	
+		return sample
+
+
+	def reset_parameters(self, stdv=1e-1):
+		for weight in self.parameters():
+			weight.data.normal_(0, stdv)
+
+
+	def _init_weights(self, stdv):
+		pass
+
+
+	def _reparameterized_sample(self, mean, std):
+		"""using std to sample"""
+		eps = torch.FloatTensor(std.size()).normal_()
+		eps = Variable(eps).to(device)
+		return eps.mul(std).add_(mean)
+
+
+	def _kld_gauss(self, mean_1, std_1, mean_2, std_2):
+		"""Using std to compute KLD"""
+
+		kld_element =  (2 * torch.log(std_2) - 2 * torch.log(std_1) + 
+			(std_1.pow(2) + (mean_1 - mean_2).pow(2)) /
+			std_2.pow(2) - 1)
+		return 0.5 * torch.sum(kld_element, dim=-1)
+
+
+	def _nll_bernoulli(self, theta, x):
+		# mean w.r.t. batch, sum w.r.t input dimensions
+		return - torch.sum(x*torch.log(theta) + (1-x)*torch.log(1-theta), dim=-1)
+
+
+	def _nll_gauss(self, mean, std, x):
+		pass
+
+
+class FIVO(nn.Module):
+	def __init__(self, x_dim, h_dim, z_dim, n_layers, num_particles, bias=False):
+		super(FIVO, self).__init__()
 
 		self.x_dim = x_dim
 		self.h_dim = h_dim
@@ -93,9 +271,9 @@ class VRNN(nn.Module):
 
 		ws, zs = [], [] # [num_seq, num_particles, (batch_size, embed_size)]
 		log_hat_ps = [0.]
-		log_hat_p_acc = 0.
+		log_hat_p_acc = torch.zeros(x.size(1)).to(device)
 
-		logw0 = torch.log(torch.ones(self.num_zs, x.size(1), requires_grad=False).to(device) / float(self.num_zs))
+		logw0 = torch.log(torch.ones([x.size(1), self.num_zs], requires_grad=False).to(device) / float(self.num_zs))
 		logweight = logw0		
 		
 		# ws = torch.ones(x.size(0), self.num_zs, x.size(1), requires_grad=False) / float(self.num_zs)
@@ -107,70 +285,59 @@ class VRNN(nn.Module):
 			# 	continue
 
 			# Inference
-			phi_x_t = self.phi_x(x[t])
+			# xts = x[t].tile(self.num_zs, 1)   # [batch_size * num_particle, 88]
+			xts = x[t].repeat((1, self.num_zs)).reshape((x.size(1)*self.num_zs, x.size(-1)))
+			phi_x_ts = self.phi_x(xts)			# [batch_size * num_particle, embed_size]
+			# phi_x_ts = phi_x_t.repeat(self.num_zs, 1)
 
 			#sampling and reparameterization
 			# logwnew = logwold.clone()
-			hat_p = 0.
-			h = h.reshape(self.n_layers, self.num_zs, x.size(1), self.h_dim)				
+			# hat_p = 0.
+			# h = h.reshape(self.n_layers, self.num_zs, x.size(1), self.h_dim) 
 
 			# may boost learning speed by using parellelism
-			phi_z_t_is = []
-			for i in range(self.num_zs):
-				#encoder
-				enc_t = self.enc(torch.cat([phi_x_t, h[-1][i]], 1))
-				enc_mean_t = self.enc_mean(enc_t)
-				enc_std_t = self.enc_std(enc_t)
-				
-				encoder_dist = MultivariateNormal(enc_mean_t, scale_tril=torch.diag_embed(enc_std_t))
+			# phi_z_t_is = []
+			enc_t = self.enc(torch.cat([phi_x_ts, h[-1]], 1))  
+			enc_mean_t = self.enc_mean(enc_t) 
+			enc_std_t = self.enc_std(enc_t)
 
-				#prior
-				prior_t = self.prior(h[-1][i])
-				prior_mean_t = self.prior_mean(prior_t)
-				prior_std_t = self.prior_std(prior_t)
+			encoder_dist = MultivariateNormal(enc_mean_t, scale_tril=torch.diag_embed(enc_std_t))
 
-				prior_dist = MultivariateNormal(prior_mean_t, scale_tril=torch.diag_embed(prior_std_t))
+			prior_t = self.prior(h[-1])
+			prior_mean_t = self.prior_mean(prior_t)
+			prior_std_t = self.prior_std(prior_t) + 1.
+
+			prior_dist = MultivariateNormal(prior_mean_t, scale_tril=torch.diag_embed(prior_std_t))
+
+			z_t_is = encoder_dist.rsample()  # reparametrizable
 			
-				z_t_i = encoder_dist.rsample()  # reparametrizable
-				# z_t_i = self._reparameterized_sample(enc_mean_t, enc_std_t)	# (batch_size, embed_size)
+			phi_z_ts = self.phi_z(z_t_is)
+			# phi_z_t_is.append(phi_z_t)
 
-				phi_z_t = self.phi_z(z_t_i)
-				phi_z_t_is.append(phi_z_t)
-				
-				#decoders
-				dec_t = self.dec(torch.cat([phi_z_t, h[-1][i]], 1))
-				dec_mean_t = self.dec_mean(dec_t)
-				# dec_std_t = self.dec_std(dec_t)
+			dec_t = self.dec(torch.cat([phi_z_ts, h[-1]], 1))
+			dec_mean_t = self.dec_mean(dec_t) 
+			decoder_dist = Bernoulli(probs=dec_mean_t)
 
-				decoder_dist = Bernoulli(probs=dec_mean_t)
+			prior_logprob_ti = prior_dist.log_prob( z_t_is.detach() ) + 1e-7
+			encoder_logprob_ti = encoder_dist.log_prob( z_t_is.detach()  ) + 1e-7
+			decoder_logprob_ti = decoder_dist.log_prob(xts).sum(-1) + 1e-7
+						
+			log_alpha_ti = prior_logprob_ti + decoder_logprob_ti - encoder_logprob_ti # [batch_size, ]
 
-				# calculate p(z^i_t|h_{i-1}),  p(x_t | h_{i-1}, z^i_t), q(z^i_t)
-				prior_logprob_ti = prior_dist.log_prob( z_t_i.detach() )
-				encoder_logprob_ti = encoder_dist.log_prob( z_t_i.detach() )
-				decoder_logprob_ti = decoder_dist.log_prob(x[t]).sum(-1)
-				
-				# calculate \alpha
-				log_alpha_ti = prior_logprob_ti + decoder_logprob_ti - encoder_logprob_ti # [batch_size, ]				
-				
-				# hat_p += torch.exp(logwold[i] + log_alpha_ti)
-				# logwnew[i] = logwold[i] + log_alpha_ti.detach()
-				hat_p += torch.exp(logweight[i] + log_alpha_ti)
-				logweight[i] = logweight[i] + log_alpha_ti.detach()					
-
-				# nll_loss += self._nll_gauss(dec_mean_t, dec_std_t, x[t])
-				# kld_loss += self._kld_gauss_dist(enc_mean_t, enc_std_t, prior_mean_t, prior_std_t)
-				# nll_loss += self._nll_bernoulli(dec_mean_t, x[t])
+			log_alpha_ti = log_alpha_ti.reshape(x.size(1), -1)  # [batch_size, num_particles]
+			hat_p = torch.exp(logweight + log_alpha_ti) 		# [batch_size, num_particles]
+			logweight = logweight + log_alpha_ti.detach()      
 				
 			# log_hat_p = log_hat_ps[t] + torch.log(hat_p)
-			log_hat_p_acc += torch.log(hat_p) * mask[t]
+			log_hat_p_acc += (torch.log(hat_p) * mask[t][None].T).mean(-1)
 			logweight = logweight - torch.log(hat_p.detach())
 			# logwold = logwnew
-			log_hat_ps.append(log_hat_p_acc)
+			# log_hat_ps.append(log_hat_p_acc)
 
 			# recurrence
-			h = h.reshape(self.n_layers, self.num_zs * x.size(1), self.h_dim)
-			phi_x_ts = phi_x_t.repeat(self.num_zs, 1)
-			phi_z_ts = torch.cat(phi_z_t_is, dim=0)
+			# h = h.reshape(self.n_layers, self.num_zs * x.size(1), self.h_dim)
+			
+			# phi_z_ts = torch.cat(phi_z_t_is, dim=0)
 
 			_, (h, c) = self.rnn(torch.cat([phi_x_ts, phi_z_ts], 1).unsqueeze(0), (h, c))				
 
@@ -181,8 +348,6 @@ class VRNN(nn.Module):
 			# nll_loss /= self.num_zs
 
 		fivo_loss = -log_hat_p_acc.sum()
-
-		
 
 		# return fivo_loss, kld_loss, nll_loss, \
 		# 	(all_enc_mean, all_enc_std), \
