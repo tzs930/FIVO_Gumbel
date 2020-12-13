@@ -132,7 +132,7 @@ def create_pianoroll_dataset(path,
   
   sources = torch.nn.utils.rnn.pad_sequence(sources, batch_first=True).float().to(device)
   targets = torch.nn.utils.rnn.pad_sequence(targets, batch_first=True).float().to(device)
-  lengths = torch.tensor(lengths)
+  lengths = torch.tensor(lengths).to(device)
 
   dataset = torch.utils.data.TensorDataset(sources, targets, lengths)
   dataset_loader = torch.utils.data.DataLoader(dataset, batch_size=batch_size, shuffle=False)

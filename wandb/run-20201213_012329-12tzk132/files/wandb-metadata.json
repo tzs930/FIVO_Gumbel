@@ -1,0 +1,24 @@
+{
+    "os": "Linux-3.10.0-1160.2.2.el7.x86_64-x86_64-with-centos-7.9.2009-Core",
+    "python": "3.7.6",
+    "heartbeatAt": "2020-12-12T16:23:31.062460",
+    "startedAt": "2020-12-12T16:23:29.686725",
+    "docker": null,
+    "gpu": "TITAN RTX",
+    "gpu_count": 4,
+    "cpu_count": 36,
+    "cuda": "8.0.61",
+    "args": [],
+    "state": "running",
+    "codePath": "train.py",
+    "program": "train.py",
+    "git": {
+        "remote": "https://github.com/tzs930/FIVO_Gumbel",
+        "commit": "56c53356924e271e4ac0dc1621371fa852874600"
+    },
+    "email": "tzs930@gmail.com",
+    "root": "/ext2/syseo/FIVO_Gumbel",
+    "host": "pixie",
+    "username": "syseo",
+    "executable": "/home/syseo/anaconda3/envs/jericho/bin/python"
+}
