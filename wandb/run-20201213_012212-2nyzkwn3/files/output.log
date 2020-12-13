@@ -1,9 +1,0 @@
-/home/syseo/anaconda3/envs/jericho/lib/python3.7/site-packages/torch/distributions/distribution.py:134: UserWarning: sample_n will be deprecated. Use .sample((n,)) instead
-  warnings.warn('sample_n will be deprecated. Use .sample((n,)) instead', UserWarning)
-Train Epoch: 1 [0/229 (0%)]	 Sequence LL: -4775.404297 KL: 97.098999 timestep LL : -62.093033,  timestep IWAE : -62.095284Traceback (most recent call last):
-  File "train.py", line 233, in <module>
-    train(epoch)
-  File "train.py", line 77, in train
-    cum_iteration += 1
-UnboundLocalError: local variable 'cum_iteration' referenced before assignment
-
