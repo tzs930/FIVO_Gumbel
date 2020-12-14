@@ -46,18 +46,18 @@ def train(epoch):
 		optimizer.zero_grad()
 		# kld_loss, nll_loss, _, _ = model(data, mask)
 		# loss = kld_loss + nll_loss
-
-		fivo_loss, logphat_total, _, kl, iwae_bound = model(data, mask, num_particles)
-		loss = fivo_loss
-		# with torch.autograd.set_detect_anomaly(True):
-		loss.backward()
-		optimizer.step()
+		with torch.autograd.set_detect_anomaly(True):
+			fivo_loss, logphat_total, _, kl, iwae_bound = model(data, mask, num_particles)
+			loss = fivo_loss
+		
+			loss.backward()
+			optimizer.step()
 
 		logp_per_timestep = logphat_total / lengths
 		iwae_bound_per_t = iwae_bound / lengths
 		mean_logp_per_timestep = logp_per_timestep.mean().item()
 		mean_iwae = iwae_bound_per_t.mean().item()
-		#grad norm clipping, only in pytorch version >= 1.10
+		# grad norm clipping, only in pytorch version >= 1.10
 		nn.utils.clip_grad_norm_(model.parameters(), clip)
 
 		for i, loghat_ in enumerate(logp_per_timestep):
@@ -194,7 +194,7 @@ z_dim = 32
 n_layers =  1
 n_epochs = 500
 clip = 10
-learning_rate = 3e-5
+learning_rate = 3e-4
 batch_size = 4
 eval_batch_size = 1
 num_particles = 8
@@ -203,8 +203,11 @@ seed = 128
 print_every = 10
 valid_every = 5
 save_every = 100
-bound = 'FIVO' # 'IWAE', 'FIVO'
-wandb.init(project="fivo_vrnn", name='%s_%d' % (bound, num_particles))
+bound =  'IWAE' #  'IWAE'
+# bound =  'IWAE'
+
+if USEWANDB:
+	wandb.init(project="fivo_vrnn", name='%s_%d' % (bound, num_particles))
 
 #manual seed
 torch.manual_seed(seed)
@@ -218,16 +221,16 @@ valid_loader = jsbdatasets.create_pianoroll_dataset('data_jsb/%s.pkl'%dataset, '
 test_loader = jsbdatasets.create_pianoroll_dataset('data_jsb/%s.pkl'%dataset, 'test', eval_batch_size)
 
 # model = IWAE(x_dim, h_dim, z_dim, n_layers).to(device)
-if bound == 'IWAE':
+if 'IWAE' in bound:
 	model = IWAE(x_dim, h_dim, z_dim, n_layers).to(device)
-elif bound == 'FIVO':
-	model = FIVO(x_dim, h_dim, z_dim, n_layers).to(device)
+elif 'FIVO' in bound:
+	model = FIVO(x_dim, h_dim, z_dim, n_layers, use_resampling_gradient=False).to(device)
 
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 if USEWANDB:
 	wandb.watch(model)
 
-for epoch in range(1, n_epochs + 1):	
+for epoch in range(1, n_epochs + 1):
 	#training + testing
 	train(epoch)
 

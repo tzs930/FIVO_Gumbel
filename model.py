@@ -5,6 +5,7 @@ import torch.utils
 import torch.utils.data
 from torchvision import datasets, transforms
 from torch.autograd import Variable
+import numpy as np
 #import matplotlib.pyplot as plt 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -278,14 +279,14 @@ class IWAE(nn.Module):
 
 			z_t_is = encoder_dist.rsample()  # reparametrizable  # [batch_size * seq_len, latent_size]
 			
-			phi_z_ts = self.phi_z(z_t_is)				
+			phi_z_ts = self.phi_z(z_t_is)
 
 			dec_t = self.dec(torch.cat([phi_z_ts, h[-1]], 1))
 			dec_mean_t = self.dec_mean(dec_t) 
 			decoder_dist = Bernoulli(probs=dec_mean_t)
 
-			prior_logprob_ti = prior_dist.log_prob( z_t_is.detach() ) 
-			encoder_logprob_ti = encoder_dist.log_prob( z_t_is.detach()  ) 
+			prior_logprob_ti = prior_dist.log_prob( z_t_is.detach() )
+			encoder_logprob_ti = encoder_dist.log_prob( z_t_is.detach() )
 			decoder_logprob_ti = decoder_dist.log_prob(xts).sum(-1)
 						
 			# recurrence							
@@ -307,7 +308,7 @@ class IWAE(nn.Module):
 
 			# logweight_acc *= (1. - should_resample_tiled.reshape(x.size(1), num_particles).float())
 			
-		iwae_bound = torch.sum(log_hat_p_acc)		
+		iwae_bound = torch.sum(log_hat_p_acc)
 		# kl_acc = kl_acc.mean(-1)
 		# kl = torch.mean(kl_acc.reshape(x.size(1), -1), dim=-1)
 
@@ -451,6 +452,9 @@ class FIVO(nn.Module):
 		log_hat_p_iwae_acc = torch.zeros(x.size(1)).to(device)
 		kl_acc = torch.zeros(x.size(1)).to(device)							# (batch_size, )
 
+		# [0, 1, 2, 3, 4, 5, 6, 7, ... ]
+		noresampleidxs = torch.arange(x.size(1) * num_particles).to(device)
+
 		h = Variable(torch.zeros(self.n_layers, x.size(1) * num_particles, self.h_dim)).to(device)
 		c = Variable(torch.zeros(self.n_layers, x.size(1) * num_particles, self.h_dim)).to(device)
 
@@ -509,10 +513,8 @@ class FIVO(nn.Module):
 			
 			if not self.use_resampling_gradient:
 				resample_dist = Categorical(logits=logweight_acc.reshape(x.size(1), num_particles))
-				resampled_idxs = resample_dist.sample_n(num_particles)
-
-				# [0, 1, 2, 3, 4, 5, 6, 7, ... ]
-				noresampleidxs = torch.arange(x.size(1) * num_particles).to(device)
+				resampled_idxs = resample_dist.sample([num_particles]).T
+				
 				# [0, 0, 0, 0, 4, 4, 4, 4, ... ]
 				sample_offset = torch.arange(x.size(1)).repeat([num_particles,1]).T.reshape(-1).to(device) * num_particles
 				resampled_idxs = resampled_idxs.reshape(-1) + sample_offset
@@ -526,15 +528,37 @@ class FIVO(nn.Module):
 				h[-1] = h[-1][new_idxs]
 				c[-1] = c[-1][new_idxs]
 
+				log_hat_p = torch.logsumexp(logweight_acc.clone(), dim=-1) - math.log(float(num_particles))
+				log_hat_p_acc += log_hat_p * should_resample.float()
+				
+				logweight_acc *= (1. - should_resample_tiled.reshape(x.size(1), num_particles).float())
+
 			else:
-				raise NotImplementedError
-				# resample_dist = RelaxedOneHotCategorical(logits=logweight_acc.reshape(x.size(1), num_particles))
-				# resampled_idxs = resample_dist.rsample_n(num_particles)
+				# raise NotImplementedError
+				resample_dist = RelaxedOneHotCategorical(logits=logweight_acc.reshape(x.size(1), num_particles), temperature=0.1)
+				resampled_onehot_relaxedidxs = resample_dist.rsample([num_particles]).permute(1,0,2)#.reshape(-1, num_particles)
+				
+				should_resample = logess <= torch.log(torch.ones_like(logess).to(device) * num_particles / 2.0)
+				should_resample = should_resample & mask[t].bool()
+				should_resample_tiled = should_resample.repeat([num_particles,1]).T.reshape(-1)
+
+				# noresample_onehot = torch.eye(x.size(1) * num_particles)
+
+				for batch_idx in range(x.size(1)):									
+					if should_resample[batch_idx]:
+						# cur_slice = (batch_idx * x.size(1) * num_particles) : (batch_idx * x.size(1) * num_particles + x.size(1) * num_particles)
+						h[-1][(batch_idx * num_particles) : (batch_idx * num_particles + num_particles)] = \
+							resampled_onehot_relaxedidxs[batch_idx] @ h[-1][(batch_idx * num_particles) : (batch_idx * num_particles + num_particles)].clone()
+						c[-1][(batch_idx * num_particles) : (batch_idx * num_particles + num_particles)] = \
+							resampled_onehot_relaxedidxs[batch_idx] @ c[-1][(batch_idx * num_particles) : (batch_idx * num_particles + num_particles)].clone()
+
+				log_hat_p = torch.logsumexp(logweight_acc.clone(), dim=-1) - math.log(float(num_particles))
+				log_hat_p_acc += log_hat_p * should_resample.float()
+				
+				logweight_acc *= (1. - should_resample_tiled.reshape(x.size(1), num_particles).float())
+
 			
-			log_hat_p = torch.logsumexp(logweight_acc.clone(), dim=-1) - math.log(float(num_particles))
-			log_hat_p_acc += log_hat_p * should_resample.float()
 			log_hat_p_iwae_acc += (torch.logsumexp(log_alpha_ti.detach(), dim=-1) - math.log(float(num_particles))) * mask[t]
-			logweight_acc *= (1. - should_resample_tiled.reshape(x.size(1), num_particles).float())
 			#computing losses						
 			# kld_loss /= self.num_zs
 			# nll_loss /= self.num_zs

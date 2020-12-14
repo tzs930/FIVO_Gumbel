@@ -1,19 +1,10 @@
-# VariationalRecurrentNeuralNetwork
-
-Pytorch implementation of the Variational RNN (VRNN), from *A Recurrent Latent Variable Model for Sequential Data*.
-
-
-The paper is available [here](https://arxiv.org/abs/1506.02216).
-
-![png](images/fig_1_vrnn.png)
+# Filtering Variational Objectives Implementation 
+- Pytorch implementation of **Filtering Variational Objectives (FIVO)**.
+- This repository is created for KAIST AI701 project. (Team 19 : HyengJoo Hwang, Seokin Seo, Yunseon Choi, see our project proposal [here](https://www.overleaf.com/project/5fc89d188aa54578ba50872e).
+- This repository is based on [VRNN pytorch implementation](https://github.com/emited/VariationalRecurrentNeuralNetwork).
+- The original paper is available [here](https://arxiv.org/pdf/1705.09279.pdf).
+- Reparameterized (relaxed) resampling is not supported yet.
 
 ## Run:
 
 To train: ``` python train.py ```
-
-
-To sample with saved model: ``` python sample.py [saves/saved_state_dict_name.pth]```
-
-## Some samples:
-
-![png](images/samples.png)
